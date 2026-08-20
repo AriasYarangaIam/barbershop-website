@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/", "destination": "/pages/index.html" },
+    { "source": "/servicios", "destination": "/pages/servicios.html" },
+    { "source": "/equipo", "destination": "/pages/equipo.html" },
+    { "source": "/reserva", "destination": "/pages/reserva.html" },
+    { "source": "/galeria", "destination": "/pages/galeria.html" },
+    { "source": "/contacto", "destination": "/pages/contacto.html" },
+    { "source": "/nosotros", "destination": "/pages/nosotros.html" }
+  ]
+}
