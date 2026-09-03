@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+    <title>Ingresar - Barbería Urbana</title>
+</head>
+<body>
+    <a href="#main" class="skip-link">Ir a contenido principal</a>
+    <header class="topbar" role="banner">
+        <div class="topbar__inner container">
+            <a class="brand" href="index.html" aria-label="Barbería Urbana - Inicio">
+                <span class="brand__pole" aria-hidden="true"></span>
+                <span class="brand__wordmark">Barbería&nbsp;Urbana</span>
+            </a>
+            <nav class="nav" aria-label="Navegación principal">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="index.html">Inicio</a></li>
+                    <li><a class="nav__link" href="contacto.html">Contacto</a></li>
+                    <li><a class="nav__link" href="login.html" aria-current="page">Ingresar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main" class="page page--login">
+        <section class="login container" aria-labelledby="login-title">
+        <div class="login__card">
+            <h1 id="login-title">Ingresar</h1>
+            <p class="login__lede">Accede para gestionar tus turnos</p>
+            <form action="#" method="post">
+                <div class="field">
+                    <label for="username">Usuario</label>
+                    <input id="username" name="username" type="text"
+                    autocomplete="username" required>
+                </div>
+                <div class="field">
+                    <label for="password">Contraseña</label>
+                    <input id="password" name="password" type="password"
+                    autocomplete="current-password" required minlength="8">
+                </div>
+                <button class="btn btn--primary login__submit" 
+                type="submit">Iniciar sesión</button>
+            </form>
+            <p class="login__note">¿No tienes cuenta? <a href="contacto.html">Escríbenos</a>.</p>
+        </div>
+        </section>
+    </main>
+    <footer class="site-footer" role="contentinfo">
+        <div class="container site-footer__grid">
+            <div class="site-footer__brand">
+                <span class="brand__pole" aria-hidden="true"></span>
+                <p class="site-footer__wordmark">Barbería&nbsp;Urbana</p>
+                <p class="site-footer__tagline">Cortes con carácter.</p>
+            </div>
+            
+            <nav class="site-footer__nav" aria-label="Navegación secundaria">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="login.html">Ingresar</a></li>    
+                </ul>
+            </nav>
+            
+            <address class="site-footer__contact">
+                <p>Av. Zubieta 742, Bayovar</p>
+                <p><a href="tel:+541155554444">+54 11 5555-4444</a></p>
+                <p><a href="https://www.instagram.com/the_rustic_barberia/" rel="noopener noreferrer">@therusticbarberia</a></p>
+                <p class="site-footer__hours">Lun – Sáb · 9am – 8pm</p>
+            </address>
+        </div>
+
+        <div class="site-footer__legal container">
+            <small>&copy; 2025 Barbería&nbsp;Urbana</small>
+        </div>
+    </footer>
+</body>
+</html>
