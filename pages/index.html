@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
-    <title>Cortes con carácter - Barbería Urbana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <title>Cortes con carácter — Barbería Urbana | Reservá tu turno</title>
+    <meta name="description" content="Barbería urbana premium en Buenos Aires. Cortes, fades y afeitado a navaja. Reservá tu turno online en 30 segundos.">
+    <link rel="canonical" href="https://barberiaurbana.com/">
+    <meta property="og:title" content="Barbería Urbana — Cortes con carácter">
+    <meta property="og:description" content="Barbería de barrio con mentalidad de atelier. Reservá tu silla en 30 segundos.">
+    <meta property="og:image" content="https://barberiaurbana.com/og/hero.jpg">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#8B6B12">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "Barbería Urbana",
+        "image": "https://barberiaurbana.com/og/hero.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Siempreviva 742",
+            "addressLocality": "Springfield",
+            "addressCountry": "AR"
+        },
+        "telephone": "+541155554444",
+        "priceRange": "$$",
+        "openingHours": "Tu-Sa 10:00-20:00"
+    }
+    </script>
 </head>
 <body>
     <a href="#main" class="skip-link">Ir a contenido principal</a>
@@ -22,15 +48,16 @@
                     <li><a class="nav__link" href="login.html">Ingresar</a></li>
                 </ul>
             </nav>
-        </div>    
+        </div>
     </header>
     <main id="main" class="page page--home">
+        <hr class="barber-pole" aria-hidden="true">
         <section class="hero" aria-labelledby="hero-title">
             <div class="container hero__grid">
                 <div class="hero__content">
                     <p class="eyebrow"><span class="eyebrow__pole" aria-hidden="true"></span>Est. 2019 · Buenos Aires</p>
                     <h1 class="hero__title" id="hero-title">Cortes con carácter. Reservá tu silla.</h1>
-                    <p class="hero__lede">Barbería de barrio con mentalidad de atelier. Tijera, navaja y café. Reservá en 30 segundos</p>
+                    <p class="hero__lede">Barbería de barrio con mentalidad de atelier. Tijera, navaja y café. Reservá en 30 segundos.</p>
                     <div class="hero__actions">
                         <a class="btn btn--accent" href="reserva.html">Reservar turno</a>
                         <a class="btn btn--ghost" href="equipo.html">Ver el trabajo</a>
@@ -39,11 +66,48 @@
                 </div>
                 <div class="hero__media">
                     <img src="../images/hero.jpg" alt="Cliente recibiendo un corte de pelo en Barbería Urbana"
-                    width="670"
-                    height="700"
+                    width="672"
+                    height="705"
                     fetchpriority="high">
                 </div>
             </div>
+        </section>
+
+        <hr class="barber-pole" aria-hidden="true">
+
+        <section class="services container" aria-labelledby="services-title">
+            <header class="section-head">
+                <p class="eyebrow"><span class="eyebrow__pole" aria-hidden="true"></span>Servicios</p>
+                <h2 id="services-title">Lo que hacemos</h2>
+                <p class="section-head__lede">Tijera y navaja. Precios claros, sin sorpresas.</p>
+            </header>
+            <ul class="services__grid" role="list">
+                <li class="service-card">
+                    <h3 class="service-card__title">Corte Clásico</h3>
+                    <p class="service-card__desc">Asesoramiento personalizado, lavado, corte a tijera o máquina y peinado final.</p>
+                    <div class="service-card__meta">
+                        <span class="service-card__duration">45 min</span>
+                        <span class="service-card__price">$15.000</span>
+                    </div>
+                </li>
+                <li class="service-card service-card--featured">
+                    <span class="service-card__pill" aria-label="Destacado">Más pedida</span>
+                    <h3 class="service-card__title">Corte + Barba</h3>
+                    <p class="service-card__desc">El ritual completo. Corte de cabello y perfilado de barba con toalla caliente y navaja.</p>
+                    <div class="service-card__meta">
+                        <span class="service-card__duration">75 min</span>
+                        <span class="service-card__price">$25.000</span>
+                    </div>
+                </li>
+                <li class="service-card">
+                    <h3 class="service-card__title">Afeitado Tradicional</h3>
+                    <p class="service-card__desc">Afeitado clásico con navaja, toallas calientes y productos de cuidado premium.</p>
+                    <div class="service-card__meta">
+                        <span class="service-card__duration">30 min</span>
+                        <span class="service-card__price">$12.000</span>
+                    </div>
+                </li>
+            </ul>
         </section>
     </main>
     <footer class="site-footer" role="contentinfo">
@@ -53,25 +117,29 @@
                 <p class="site-footer__wordmark">Barbería&nbsp;Urbana</p>
                 <p class="site-footer__tagline">Cortes con carácter.</p>
             </div>
-            
+
             <nav class="site-footer__nav" aria-label="Navegación secundaria">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="login.html">Ingresar</a></li>    
+                    <li><a href="login.html">Ingresar</a></li>
                 </ul>
             </nav>
-            
+
             <address class="site-footer__contact">
-                <p>Av. Zubieta 742, Bayovar</p>
+                <p>Av. Siempreviva 742, Springfield</p>
                 <p><a href="tel:+541155554444">+54 11 5555-4444</a></p>
-                <p><a href="https://www.instagram.com/the_rustic_barberia/" rel="noopener noreferrer">@therusticbarberia</a></p>
-                <p class="site-footer__hours">Lun – Sáb · 9am – 8pm</p>
+                <p><a href="https://instagram.com/barberiaurbana" rel="noopener noreferrer">@barberiaurbana</a></p>
+                <p class="site-footer__hours">Mar–Sáb · 10–20hs</p>
             </address>
         </div>
 
         <div class="site-footer__legal container">
             <small>&copy; 2025 Barbería&nbsp;Urbana</small>
+            <ul>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Términos</a></li>
+            </ul>
         </div>
     </footer>
 </body>

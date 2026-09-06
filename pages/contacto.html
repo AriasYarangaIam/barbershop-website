@@ -1,18 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
- <head>
+<html lang="es">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
-    <title>Contacto - Barbería Urbana</title>
- </head>
-    <body>
-     <a href="#main" class="skip-link">Ir a contenido principal</a>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <title>Contacto — Barbería Urbana | Escribenos o reserva tu turno</title>
+    <meta name="description" content="Contactá a Barbería Urbana en Springfield. Escríbenos, consultá horarios o reservá tu turno online.">
+    <link rel="canonical" href="https://barberiaurbana.com/contacto.html">
+    <meta property="og:title" content="Contacto — Barbería Urbana">
+    <meta property="og:description" content="Contactá a Barbería Urbana en Springfield. Escríbenos, consultá horarios o reservá tu turno online.">
+    <meta property="og:image" content="https://barberiaurbana.com/og/hero.jpg">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#8B6B12">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "Barbería Urbana",
+        "image": "https://barberiaurbana.com/og/hero.jpg",
+        "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Siempreviva 742",
+        "addressLocality": "Springfield",
+        "addressCountry": "AR"
+    },
+        "telephone": "+541155554444",
+        "priceRange": "$$",
+        "openingHours": "Tu-Sa 10:00-20:00"
+    }
+    </script>
+</head>
+<body>
+    <a href="#main" class="skip-link">Ir a contenido principal</a>
 
-     <header class="topbar" role="banner">
+    <header class="topbar" role="banner">
         <div class="topbar__inner container">
-
             <a class="brand" href="index.html" aria-label="Barbería Urbana - Inicio">
                 <span class="brand__pole" aria-hidden="true"></span>
                 <span class="brand__wordmark">Barbería&nbsp;Urbana</span>
@@ -20,106 +45,128 @@
 
             <nav class="nav" aria-label="Navegación principal">
                 <ul class="nav__list">
-                    <li>
-                        <a class="nav__link" href="index.html">Inicio</a>
-                    </li>
-
-                    <li>
-                        <a class="nav__link" href="contacto.html" aria-current="page">
-                            Contacto
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="nav__link" href="login.html">Ingresar</a>
-                    </li>
+                    <li><a class="nav__link" href="index.html">Inicio</a></li>
+                    <li><a class="nav__link" href="contacto.html" aria-current="page">Contacto</a></li>
+                    <li><a class="nav__link" href="login.html">Ingresar</a></li>
                 </ul>
             </nav>
         </div>
-     </header>
+    </header>
 
-        <main id="main" class="page page--contact">
-            <header class="page-header container">
-                <h1>Contacto</h1>
-                <hrclass="barber-pole" aria-hidden="true">
-            </header>
-            <div class="container contact__grid">
-                <div class="contact__info">
+    <main id="main" class="page page--contact">
+        <header class="page-header container">
+            <h1>Contacto</h1>
+            <hr class="barber-pole" aria-hidden="true">
+        </header>
+        <div class="container contact__grid">
+            <div class="contact__info">
+                <section aria-labelledby="info-title">
+                    <h2 id="info-title">Estamos aquí</h2>
+                    <address class="contact-list">
+                        <p><span aria-hidden="true">📍</span> <strong>Dirección</strong><br>Av. Siempreviva 742, Springfield, CP 12345</p>
+                        <p><span aria-hidden="true">📞</span> <strong>Teléfono</strong><br><a href="tel:+541155554444">+54 11 5555-4444</a></p>
+                        <p><span aria-hidden="true">✉</span> <strong>Email</strong><br><a href="mailto:info@barberiaurbana.com">info@barberiaurbana.com</a></p>
+                        <p><span aria-hidden="true">🅾</span> <strong>Instagram</strong><br><a href="https://instagram.com/barberiaurbana" rel="noopener noreferrer">@barberiaurbana</a></p>
+                    </address>
+                </section>
 
-                    <section aria-labelledby="info-title">
-                        <h2 id="info-title">Estamos aquí</h2>
-                        <address class="contact-list">
-                            <p><span aria-hidden="true">📍</span> <strong>Dirección</strong><br>Av. Siempreviva 742, Springfield, CP 12345</p>
-                            <p><span aria-hidden="true">📞</span> <strong>Teléfono</strong><br><a href="tel:+541155554444">+54 11 5555-4444</a></p>
-                            <p><span aria-hidden="true">✉</span> <strong>Email</strong><br><a href="mailto:info@barberiaurbana.com">info@barberiaurbana.com</a></p>
-                            <p><span aria-hidden="true">🅾</span> <strong>Instagram</strong><br><a href="https://instagram.com/barberiaurbana" rel="noopener noreferrer">@barberiaurbana</a></p>
-                        </address>
-                    </section>
+                <section class="hours-card" aria-labelledby="hours-title">
+                    <h2 id="hours-title">Horarios de atención</h2>
+                    <table class="hours-table">
+                        <caption class="visually-hidden">Horarios de atención de Barbería Urbana</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Día</th>
+                                <th scope="col">Horario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Lunes – Viernes</th><td>09:00 – 20:00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Sábados</th><td>10:00 – 18:00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Domingos</th><td>Cerrado</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
 
-                    <section class="hours-card" aria-labelledby="hours-title">
-                        <h2 id="hours-title">Horarios de atención</h2>
-                        <table class="hours-table">
-                            <caption class="visually-hidden"> Horarios de atención de Barbería Urbana </caption>
-                            <thead>
-                                <tr>
-                                    <th scope="col">Día</th>
-                                    <th scope="col">Horario</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Lunes – Viernes</th><td>09:00 – 20:00</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Sábados</th><td>10:00 – 18:00</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Domingos</th><td>Cerrado</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </section>
+                    <figure class="contact__photo">
+                        <img src="../images/barber-cut.jpg" alt="Barbero realizando un corte de precisión con máquina en la nuca de un cliente" width="600" height="800" loading="lazy">
+                        <figcaption class="visually-hidden">Corte de precisión en Barbería Urbana</figcaption>
+                    </figure>
+
                     <figure class="map-embed">
                         <iframe src="https://www.google.com/maps/embed?…" title="Mapa de ubicación de Barbería Urbana" loading="lazy"></iframe>
                     </figure>
-                </div>
-                <section class="contact-form-card" aria-labelledby="form-title">
-                    <h2 id="form-title">Escríbenos</h2>
-                    <p>¿Tienes alguna duda o consulta especial? Déjanos un mensaje. Si deseas agendar, usá la <a href="reserva.html">Plataforma de Reserva Online</a>.</p>
-                    <form action="#" method="post">
-                        <div class="field">
-                            <label for="name">Nombre completo</label>
-                            <input id="name" name="name" type="text" autocomplete="name" placeholder="Juan Pérez…">
-                        </div>
-                        <div class="field">
-                            <label for="email">Correo electrónico</label>
-                            <input id="email" name="email" type="email" autocomplete="email" placeholder="juan@ejemplo.com…">
-                        </div>
-                        <div class="field">
-                            <label for="subject">Asunto</label>
-                            <select id="subject" name="subject">
-                                <option value="" selected disabled>Selecciona un asunto…</option>
-                                <option value="general">Consulta general</option>
-                                <option value="evento">Evento privado</option>
-                                <option value="producto">Producto</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                        </div>
-                        <div class="field">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" rows="5" placeholder="¿En qué podemos ayudarte?…"></textarea>
-                        </div>
-                        <button class="btn btn--primary contact-form-card__submit" type="submit">Enviar mensaje</button>
-                    </form>
-                </section>
             </div>
-        </main>
-        <footer class="site-footer" role="contentinfo">
-            <div class="site-footer__legal container">
-                <small>
-                    &copy; 2025 Barbería&nbsp;Urbana
-                </small>
+
+            <section class="contact-form-card" aria-labelledby="form-title">
+                <h2 id="form-title">Escríbenos</h2>
+                <p>¿Tienes alguna duda o consulta especial? Déjanos un mensaje. Si deseas agendar, usa la <a href="reserva.html">Plataforma de Reserva Online</a>.</p>
+                <form action="#" method="post">
+                    <div class="field">
+                        <label for="name">Nombre completo</label>
+                        <input id="name" name="name" type="text" autocomplete="name" placeholder="Juan Pérez…">
+                    </div>
+                    <div class="field">
+                        <label for="email">Correo electrónico</label>
+                        <input id="email" name="email" type="email" autocomplete="email" placeholder="fabricio@ejemplo.com…">
+                    </div>
+                    <div class="field">
+                        <label for="subject">Asunto</label>
+                        <select id="subject" name="subject">
+                            <option value="" selected disabled>Selecciona un asunto…</option>
+                            <option value="general">Consulta general</option>
+                            <option value="evento">Evento privado</option>
+                            <option value="producto">Producto</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" placeholder="¿En qué podemos ayudarte?…"></textarea>
+                    </div>
+                    <button class="btn btn--primary contact-form-card__submit" type="submit">Enviar mensaje</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container site-footer__grid">
+            <div class="site-footer__brand">
+                <span class="brand__pole" aria-hidden="true"></span>
+                <p class="site-footer__wordmark">Barbería&nbsp;Urbana</p>
+                <p class="site-footer__tagline">Cortes con carácter.</p>
             </div>
-        </footer>  
-    </body>
+
+            <nav class="site-footer__nav" aria-label="Navegación secundaria">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="login.html">Ingresar</a></li>
+                </ul>
+            </nav>
+
+            <address class="site-footer__contact">
+                <p>Av. Siempreviva 742, Springfield</p>
+                <p><a href="tel:+541155554444">+54 11 5555-4444</a></p>
+                <p><a href="https://instagram.com/barberiaurbana" rel="noopener noreferrer">@barberiaurbana</a></p>
+                <p class="site-footer__hours">Mar–Sáb · 10–20hs</p>
+            </address>
+        </div>
+
+        <div class="site-footer__legal container">
+            <small>&copy; 2025 Barbería&nbsp;Urbana</small>
+            <ul>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Términos</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
 </html>
