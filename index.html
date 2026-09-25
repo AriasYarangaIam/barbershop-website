@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -6,30 +6,30 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-    <title>Cortes con carácter — Barbería Urbana | Reservá tu turno</title>
-    <meta name="description" content="Barbería urbana premium en Buenos Aires. Cortes, fades y afeitado a navaja. Reservá tu turno online en 30 segundos.">
-    <link rel="canonical" href="https://barberiaurbana.com/">
-    <meta property="og:title" content="Barbería Urbana — Cortes con carácter">
-    <meta property="og:description" content="Barbería de barrio con mentalidad de atelier. Reservá tu silla en 30 segundos.">
-    <meta property="og:image" content="https://barberiaurbana.com/og/hero.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <title>Cortes con carácter — The Rustic Barber Shop | Reserva tu turno</title>
+    <meta name="description" content="Barbería y academia de barbería en Peru. Cortes, fades, barba y cursos de barbería. Reserva tu turno online en 30 segundos.">
+    <link rel="canonical" href="https://therusticbarbershop.com/">
+    <meta property="og:title" content="The Rustic Barber Shop — Cortes con carácter">
+    <meta property="og:description" content="Barbería y academia. Cortes, fades, barba y cursos de barbería. Reservá tu silla en 30 segundos.">
+    <meta property="og:image" content="https://therusticbarbershop.com/og/hero.jpg">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#8B6B12">
+    <meta name="theme-color" content="#0D0D0D">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "HairSalon",
-        "name": "Barbería Urbana",
-        "image": "https://barberiaurbana.com/og/hero.jpg",
+        "name": "The Rustic Barber Shop",
+        "image": "https://therusticbarbershop.com/og/hero.jpg",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Av. Siempreviva 742",
-            "addressLocality": "Springfield",
-            "addressCountry": "AR"
+            "addressLocality": "Lima",
+            "addressCountry": "PE"
         },
-        "telephone": "+541155554444",
+        "telephone": "+5112345678",
         "priceRange": "$$",
-        "openingHours": "Tu-Sa 10:00-20:00"
+        "openingHours": ["Mo-Fr 09:00-20:00", "Sa 10:00-18:00", "Su closed"]
     }
     </script>
 </head>
@@ -37,27 +37,60 @@
     <a href="#main" class="skip-link">Ir a contenido principal</a>
     <header class="topbar" role="banner">
         <div class="topbar__inner container">
-            <a class="brand" href="/" aria-label="Barbería Urbana - Inicio">
+            <a class="brand" href="/" aria-label="The Rustic Barber Shop — inicio">
                 <span class="brand__pole" aria-hidden="true"></span>
-                <span class="brand__wordmark">Barbería&nbsp;Urbana</span>
+                <span class="brand__wordmark">The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</span>
             </a>
             <nav class="nav" aria-label="Navegación principal">
                 <ul class="nav__list">
                     <li><a class="nav__link" href="/" aria-current="page">Inicio</a></li>
+                    <li><a class="nav__link" href="/servicios">Servicios</a></li>
+                    <li><a class="nav__link" href="/equipo">Equipo</a></li>
+                    <li><a class="nav__link" href="/galeria">Galería</a></li>
+                    <li><a class="nav__link" href="/reserva">Reserva</a></li>
                     <li><a class="nav__link" href="/contacto">Contacto</a></li>
-                    <li><a class="nav__link" href="/login">Ingresar</a></li>
                 </ul>
             </nav>
+            <a class="btn btn--primary topbar__cta" href="/reserva">Reservar turno</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Abrir menú">
+                <span aria-hidden="true"></span>
+            </button>
         </div>
     </header>
+
+    <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menú de navegación" hidden>
+        <div class="mobile-drawer__overlay" data-drawer-close aria-hidden="true"></div>
+        <div class="mobile-drawer__panel">
+            <div class="mobile-drawer__head">
+                <span class="brand__pole" aria-hidden="true"></span>
+                <span class="mobile-drawer__title">The Rustic Barber Shop</span>
+                <button class="mobile-drawer__close" type="button" aria-label="Cerrar menú" data-drawer-close>
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <nav aria-label="Navegación móvil">
+                <ul class="mobile-drawer__list">
+                    <li><a class="mobile-drawer__link" href="/" aria-current="page">Inicio</a></li>
+                    <li><a class="mobile-drawer__link" href="/servicios">Servicios</a></li>
+                    <li><a class="mobile-drawer__link" href="/equipo">Equipo</a></li>
+                    <li><a class="mobile-drawer__link" href="/galeria">Galería</a></li>
+                    <li><a class="mobile-drawer__link" href="/reserva">Reserva</a></li>
+                    <li><a class="mobile-drawer__link" href="/contacto">Contacto</a></li>
+                    <li><a class="mobile-drawer__link" href="/nosotros">Nosotros</a></li>
+                    <li><a class="mobile-drawer__link" href="/login">Ingresar</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn--accent mobile-drawer__cta" href="/reserva">Reservar turno</a>
+        </div>
+    </div>
+
     <main id="main" class="page page--home">
-        <hr class="barber-pole" aria-hidden="true">
         <section class="hero" aria-labelledby="hero-title">
             <div class="container hero__grid">
                 <div class="hero__content">
-                    <p class="eyebrow"><span class="eyebrow__pole" aria-hidden="true"></span>Est. 2019 · Buenos Aires</p>
-                    <h1 class="hero__title" id="hero-title">Cortes con carácter. Reservá tu silla.</h1>
-                    <p class="hero__lede">Barbería de barrio con mentalidad de atelier. Tijera, navaja y café. Reservá en 30 segundos.</p>
+                    <p class="eyebrow"><span class="eyebrow__pole" aria-hidden="true"></span>Est. 2017 · Peru</p>
+                    <h1 class="hero__title" id="hero-title">Cortes con carácter. Reserva tu silla.</h1>
+                    <p class="hero__lede">The Rustic Barber Shop: barbería y academia. Tijera, navaja y café. Reserva en 30 segundos.</p>
                     <div class="hero__actions">
                         <a class="btn btn--accent" href="/reserva">Reservar turno</a>
                         <a class="btn btn--ghost" href="/equipo">Ver el trabajo</a>
@@ -65,7 +98,7 @@
                     <p class="hero__proof" aria-label="Valoración">★ 4.9 · 320 reservas este mes</p>
                 </div>
                 <div class="hero__media">
-                    <img src="images/hero.jpg" alt="Cliente recibiendo un corte de pelo en Barbería Urbana"
+                    <img src="images/hero.jpg" alt="Cliente recibiendo un corte de pelo en The Rustic Barber Shop"
                     width="672"
                     height="705"
                     fetchpriority="high">
@@ -87,7 +120,7 @@
                     <p class="service-card__desc">Asesoramiento personalizado, lavado, corte a tijera o máquina y peinado final.</p>
                     <div class="service-card__meta">
                         <span class="service-card__duration">45 min</span>
-                        <span class="service-card__price">$15.000</span>
+                        <span class="service-card__price">S/ 15.00</span>
                     </div>
                 </li>
                 <li class="service-card service-card--featured">
@@ -96,7 +129,7 @@
                     <p class="service-card__desc">El ritual completo. Corte de cabello y perfilado de barba con toalla caliente y navaja.</p>
                     <div class="service-card__meta">
                         <span class="service-card__duration">75 min</span>
-                        <span class="service-card__price">$25.000</span>
+                        <span class="service-card__price">S/ 25.00</span>
                     </div>
                 </li>
                 <li class="service-card">
@@ -104,43 +137,114 @@
                     <p class="service-card__desc">Afeitado clásico con navaja, toallas calientes y productos de cuidado premium.</p>
                     <div class="service-card__meta">
                         <span class="service-card__duration">30 min</span>
-                        <span class="service-card__price">$12.000</span>
+                        <span class="service-card__price">S/ 12.00</span>
                     </div>
                 </li>
             </ul>
+            <a class="link-arrow" href="/servicios">Ver todos los servicios →</a>
         </section>
+
+        <hr class="barber-pole" aria-hidden="true">
+
+        <section class="barbers container" aria-labelledby="team-preview-title">
+            <header class="section-head">
+                <p class="eyebrow"><span class="eyebrow__pole" aria-hidden="true"></span>Equipo</p>
+                <h2 id="team-preview-title">Las manos detrás del corte</h2>
+                <p class="section-head__lede">Tres barberos, tres estilos. Elige con quién reservar.</p>
+            </header>
+            <ul class="barbers__grid" role="list">
+                <li class="barber-card">
+                    <img class="barber-card__photo" src="images/marco.jpg" alt="Retrato de Marco, barbero especialista en fade y barba" width="400" height="400" loading="lazy"
+                        onerror="if(this.src!=='images/barber-cut.jpg'){this.src='images/barber-cut.jpg';this.alt='Imagen de respaldo del equipo de The Rustic Barber Shop';}">
+                    <div class="barber-card__body">
+                        <h3 class="barber-card__name">Marco</h3>
+                        <p class="barber-card__spec">Especialidad: Fade &amp; Barba</p>
+                        <p class="barber-card__rating" aria-label="Valoración 4.9 de 5"><span aria-hidden="true">★★★★★</span> 4.9/5</p>
+                        <a class="btn btn--ghost" href="/reserva?barbero=marco">Reservar con Marco</a>
+                    </div>
+                </li>
+                <li class="barber-card">
+                    <img class="barber-card__photo" src="images/diego.jpg" alt="Retrato de Diego, barbero especialista en tijera y textura" width="400" height="400" loading="lazy"
+                        onerror="if(this.src!=='images/barber-cut.jpg'){this.src='images/barber-cut.jpg';this.alt='Imagen de respaldo del equipo de The Rustic Barber Shop';}">
+                    <div class="barber-card__body">
+                        <h3 class="barber-card__name">Diego</h3>
+                        <p class="barber-card__spec">Especialidad: Tijera &amp; Textura</p>
+                        <p class="barber-card__rating" aria-label="Valoración 4.8 de 5"><span aria-hidden="true">★★★★★</span> 4.8/5</p>
+                        <a class="btn btn--ghost" href="/reserva?barbero=diego">Reservar con Diego</a>
+                    </div>
+                </li>
+                <li class="barber-card">
+                    <img class="barber-card__photo" src="images/lucia.jpg" alt="Retrato de Lucía, barbera especialista en afeitado tradicional" width="400" height="400" loading="lazy"
+                        onerror="if(this.src!=='images/barber-cut.jpg'){this.src='images/barber-cut.jpg';this.alt='Imagen de respaldo del equipo de The Rustic Barber Shop';}">
+                    <div class="barber-card__body">
+                        <h3 class="barber-card__name">Lucía</h3>
+                        <p class="barber-card__spec">Especialidad: Afeitado Tradicional</p>
+                        <p class="barber-card__rating" aria-label="Valoración 5.0 de 5"><span aria-hidden="true">★★★★★</span> 5.0/5</p>
+                        <a class="btn btn--ghost" href="/reserva?barbero=lucia">Reservar con Lucía</a>
+                    </div>
+                </li>
+            </ul>
+            <a class="link-arrow" href="/equipo">Conoce al equipo →</a>
+        </section>
+
+        <section class="testimonial-feature" aria-label="Testimonio destacado">
+            <div class="container">
+                <blockquote>
+                    <p>“Marco entiende exactamente lo que busco. El fade es siempre impecable.”</p>
+                    <footer><cite>Javier S.</cite> · <span>Cliente recurrente</span></footer>
+                </blockquote>
+            </div>
+        </section>
+
+        <aside class="cta-band" aria-labelledby="home-cta">
+            <div class="container cta-band__inner">
+                <div>
+                    <h2 class="cta-band__title" id="home-cta">¿Listo para el corte?</h2>
+                    <p class="cta-band__text">Reserva tu silla en 30 segundos.</p>
+                </div>
+                <a class="btn btn--accent" href="/reserva">Reservar turno</a>
+            </div>
+        </aside>
     </main>
     <footer class="site-footer" role="contentinfo">
         <div class="container site-footer__grid">
             <div class="site-footer__brand">
                 <span class="brand__pole" aria-hidden="true"></span>
-                <p class="site-footer__wordmark">Barbería&nbsp;Urbana</p>
-                <p class="site-footer__tagline">Cortes con carácter.</p>
+                <p class="site-footer__wordmark">The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</p>
+                <p class="site-footer__tagline">Cortes con carácter. Formación con alma.</p>
+                <a class="site-footer__about" href="/nosotros">Conoce la historia →</a>
             </div>
 
             <nav class="site-footer__nav" aria-label="Navegación secundaria">
                 <ul>
                     <li><a href="/">Inicio</a></li>
+                    <li><a href="/servicios">Servicios</a></li>
+                    <li><a href="/equipo">Equipo</a></li>
+                    <li><a href="/galeria">Galería</a></li>
+                    <li><a href="/reserva">Reserva</a></li>
                     <li><a href="/contacto">Contacto</a></li>
+                    <li><a href="/nosotros">Nosotros</a></li>
                     <li><a href="/login">Ingresar</a></li>
                 </ul>
             </nav>
 
             <address class="site-footer__contact">
-                <p>Av. Siempreviva 742, Springfield</p>
-                <p><a href="tel:+541155554444">+54 11 5555-4444</a></p>
-                <p><a href="https://instagram.com/barberiaurbana" rel="noopener noreferrer">@barberiaurbana</a></p>
-                <p class="site-footer__hours">Mar–Sáb · 10–20hs</p>
+                <p>Av. Siempreviva 742, Lima, Peru</p>
+                <p><a href="tel:+5112345678">+51 1 234 5678</a></p>
+                <p><a href="https://instagram.com/therusticbarbershop" rel="noopener noreferrer">@therusticbarbershop</a></p>
+                <p class="site-footer__hours">Lun–Vie 09:00–20:00 · Sáb 10:00–18:00 · Dom cerrado</p>
             </address>
         </div>
 
         <div class="site-footer__legal container">
-            <small>&copy; 2025 Barbería&nbsp;Urbana</small>
+            <small>&copy; 2025 The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</small>
             <ul>
                 <li><a href="#">Política de privacidad</a></li>
                 <li><a href="#">Términos</a></li>
             </ul>
         </div>
     </footer>
+
+    <script src="scripts/main.js"></script>
 </body>
 </html>
