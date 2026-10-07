@@ -955,6 +955,52 @@ ul, ol {
 }
 
 /* ==========================================================================
+   Galería — .before-after, .ba-slider, .filters, .masonry
+   ========================================================================== */
+
+/* --- Before/After Slider --- */
+
+/* --- Filtros Sticky --- */
+
+/* --- Masonry Grid --- */
+
+/* ==========================================================================
+   Nosotros (About) — .editorial-hero, .ambient, .narrative, .values,
+                       .stats, .founder-quote
+   ========================================================================== */
+
+/* --- Editorial Hero + Ambient --- */
+
+/* --- Narrative Text --- */
+
+/* --- Value Cards --- */
+
+/* --- Stats Grid --- */
+
+/* --- Founder Quote --- */
+
+/* ==========================================================================
+   Contacto — .contact__grid, .contact-form-card, .hours-table, .map-embed
+   ========================================================================== */
+
+/* --- Info de contacto y mapa --- */
+
+/* --- Formulario --- */
+
+/* ==========================================================================
+   Reserva (Booking) — .booking__grid, .booking__form, .booking__slots,
+                       .booking__pole, .booking__info, .slots
+   ========================================================================== */
+
+/* --- Formulario de Reserva --- */
+
+/* --- Barber Pole Vertical --- */
+
+/* --- Selector de Horarios --- */
+
+/* --- Info Box --- */
+
+/* ==========================================================================
    CTA Band — .cta-band (Call-to-Action Section)
    ========================================================================== */
 .cta-band {
