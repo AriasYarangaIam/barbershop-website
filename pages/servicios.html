@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <title>Servicios — The Rustic Barber Shop | Catálogo y precios</title>
+    <meta name="description" content="Catálogo de servicios de The Rustic Barber Shop: corte clásico, corte + barba, afeitado tradicional, coloración, limpieza facial y corte junior. Precios y duración claros, sin sorpresas.">
+    <link rel="canonical" href="https://therusticbarbershop.com/servicios">
+    <meta property="og:title" content="Servicios — The Rustic Barber Shop">
+    <meta property="og:description" content="Tijera y navaja. Precios claros, sin sorpresas.">
+    <meta property="og:image" content="https://therusticbarbershop.com/og/hero.jpg">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0D0D0D">
+</head>
+<body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <header class="topbar" role="banner">
+        <div class="topbar__inner container">
+            <a class="brand" href="/" aria-label="The Rustic Barber Shop — inicio">
+                <span class="brand__pole" aria-hidden="true"></span>
+                <span class="brand__wordmark">The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</span>
+            </a>
+            <nav class="nav" aria-label="Navegación principal">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="/">Inicio</a></li>
+                    <li><a class="nav__link" href="/servicios" aria-current="page">Servicios</a></li>
+                    <li><a class="nav__link" href="/equipo">Equipo</a></li>
+                    <li><a class="nav__link" href="/galeria">Galería</a></li>
+                    <li><a class="nav__link" href="/reserva">Reserva</a></li>
+                    <li><a class="nav__link" href="/contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn--primary topbar__cta" href="/reserva">Reservar turno</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Abrir menú">
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menú de navegación" hidden>
+        <div class="mobile-drawer__overlay" data-drawer-close aria-hidden="true"></div>
+        <div class="mobile-drawer__panel">
+            <div class="mobile-drawer__head">
+                <span class="brand__pole" aria-hidden="true"></span>
+                <span class="mobile-drawer__title">The Rustic Barber Shop</span>
+                <button class="mobile-drawer__close" type="button" aria-label="Cerrar menú" data-drawer-close>
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <nav aria-label="Navegación móvil">
+                <ul class="mobile-drawer__list">
+                    <li><a class="mobile-drawer__link" href="/">Inicio</a></li>
+                    <li><a class="mobile-drawer__link" href="/servicios" aria-current="page">Servicios</a></li>
+                    <li><a class="mobile-drawer__link" href="/equipo">Equipo</a></li>
+                    <li><a class="mobile-drawer__link" href="/galeria">Galería</a></li>
+                    <li><a class="mobile-drawer__link" href="/reserva">Reserva</a></li>
+                    <li><a class="mobile-drawer__link" href="/contacto">Contacto</a></li>
+                    <li><a class="mobile-drawer__link" href="/nosotros">Nosotros</a></li>
+                    <li><a class="mobile-drawer__link" href="/login">Ingresar</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn--accent mobile-drawer__cta" href="/reserva">Reservar turno</a>
+        </div>
+    </div>
+
+    <main id="main" class="page page--services">
+        <section class="page-head container" aria-labelledby="services-title">
+            <p class="eyebrow"><span class="eyebrow__pole" aria-hidden="true"></span>Servicios</p>
+            <h1 class="page-head__title" id="services-title">Lo que hacemos</h1>
+            <p class="page-head__lede">Tijera y navaja. Precios claros, sin sorpresas.</p>
+        </section>
+
+        <hr class="barber-pole" aria-hidden="true">
+
+        <section class="services container" aria-labelledby="services-grid-title">
+            <h2 class="visually-hidden" id="services-grid-title">Catálogo de servicios</h2>
+            <ul class="services__grid" role="list">
+                <li class="service-card">
+                    <span class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></span>
+                    <h3 class="service-card__title">Corte Clásico</h3>
+                    <p class="service-card__desc">Asesoramiento personalizado, lavado, corte a tijera o máquina y peinado final.</p>
+                    <div class="service-card__meta">
+                        <span class="service-card__duration">45 min</span>
+                        <span class="service-card__price">S/ 15.00</span>
+                    </div>
+                </li>
+                <li class="service-card service-card--featured">
+                    <span class="service-card__pill">Más pedida</span>
+                    <span class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.735H5.81a1 1 0 0 1-.957-.735L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></svg></span>
+                    <h3 class="service-card__title">Corte + Barba</h3>
+                    <p class="service-card__desc">El ritual completo. Corte de cabello y perfilado de barba con toalla caliente y navaja.</p>
+                    <div class="service-card__meta">
+                        <span class="service-card__duration">75 min</span>
+                        <span class="service-card__price">S/ 25.00</span>
+                    </div>
+                </li>
+                <li class="service-card">
+                    <span class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="6" rx="2"/><line x1="7" y1="12" x2="17" y2="12"/></svg></span>
+                    <h3 class="service-card__title">Afeitado Tradicional</h3>
+                    <p class="service-card__desc">Afeitado clásico con navaja, toallas calientes y productos de cuidado premium.</p>
+                    <div class="service-card__meta">
+                        <span class="service-card__duration">30 min</span>
+                        <span class="service-card__price">S/ 12.00</span>
+                    </div>
+                </li>
+                <li class="service-card">
+                    <span class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span>
+                    <h3 class="service-card__title">Coloración</h3>
+                    <p class="service-card__desc">Cobertura de canas o cambio de tono con productos profesionales que cuidan tu cabello.</p>
+                    <div class="service-card__meta">
+                        <span class="service-card__duration">60 min</span>
+                        <span class="service-card__price">S/ 35.00</span>
+                    </div>
+                </li>
+                <li class="service-card">
+                    <span class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.9 2.4L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z"/></svg></span>
+                    <h3 class="service-card__title">Limpieza Facial</h3>
+                    <p class="service-card__desc">Limpieza profunda con exfoliación, extracción y mascarilla para renovar tu piel.</p>
+                    <div class="service-card__meta">
+                        <span class="service-card__duration">30 min</span>
+                        <span class="service-card__price">S/ 20.00</span>
+                    </div>
+                </li>
+                <li class="service-card">
+                    <span class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></span>
+                    <h3 class="service-card__title">Corte Junior</h3>
+                    <p class="service-card__desc">Corte para los más pequeños, con paciencia, estilo y una sonrisa.</p>
+                    <div class="service-card__meta">
+                        <span class="service-card__duration">30 min</span>
+                        <span class="service-card__price">S/ 10.00</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <hr class="barber-pole" aria-hidden="true">
+
+        <section class="process container" aria-labelledby="process-title">
+            <header class="section-head">
+                <p class="eyebrow"><span class="eyebrow__pole" aria-hidden="true"></span>El proceso</p>
+                <h2 id="process-title">El proceso urbano</h2>
+                <p class="section-head__lede">Nada de esperas eternas. En cuatro pasos estás listo.</p>
+            </header>
+            <ol class="process__steps">
+                <li class="process__step">
+                    <span class="process__num" aria-hidden="true">01</span>
+                    <h3 class="process__title">Reserva</h3>
+                    <p class="process__desc">Elige servicio, barbero y horario en la web.</p>
+                </li>
+                <li class="process__step">
+                    <span class="process__num" aria-hidden="true">02</span>
+                    <h3 class="process__title">Llega 5 min antes</h3>
+                    <p class="process__desc">Disfruta de un café mientras preparamos tu silla.</p>
+                </li>
+                <li class="process__step">
+                    <span class="process__num" aria-hidden="true">03</span>
+                    <h3 class="process__title">Cortamos</h3>
+                    <p class="process__desc">Consultoría de imagen y ejecución precisa, sin apuros.</p>
+                </li>
+                <li class="process__step">
+                    <span class="process__num" aria-hidden="true">04</span>
+                    <h3 class="process__title">Vuelve</h3>
+                    <p class="process__desc">Paga fácil y agenda tu próxima visita antes de irte.</p>
+                </li>
+            </ol>
+        </section>
+
+        <aside class="cta-band" aria-labelledby="services-cta">
+            <div class="container cta-band__inner">
+                <div>
+                    <h2 class="cta-band__title" id="services-cta">¿Listo para un cambio?</h2>
+                    <p class="cta-band__text">Reserva tu silla en 30 segundos.</p>
+                </div>
+                <a class="btn btn--accent" href="/reserva">Reservar turno</a>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container site-footer__grid">
+            <div class="site-footer__brand">
+                <span class="brand__pole" aria-hidden="true"></span>
+                <p class="site-footer__wordmark">The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</p>
+                <p class="site-footer__tagline">Cortes con carácter. Formación con alma.</p>
+                <a class="site-footer__about" href="/nosotros">Conoce la historia →</a>
+            </div>
+
+            <nav class="site-footer__nav" aria-label="Navegación secundaria">
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/servicios">Servicios</a></li>
+                    <li><a href="/equipo">Equipo</a></li>
+                    <li><a href="/galeria">Galería</a></li>
+                    <li><a href="/reserva">Reserva</a></li>
+                    <li><a href="/contacto">Contacto</a></li>
+                    <li><a href="/nosotros">Nosotros</a></li>
+                    <li><a href="/login">Ingresar</a></li>
+                </ul>
+            </nav>
+
+            <address class="site-footer__contact">
+                <p>Mz K5 LT4 A.A.H.H., Atusparia, San Juan de Lurigancho 15442</p>
+                <p><a href="tel:+51985798249">+51 985 798 249</a></p>
+                <p class="site-footer__hours">Lun–Vie 09:00–20:00 · Sáb 10:00–18:00 · Dom cerrado</p>
+            </address>
+        </div>
+
+        <div class="site-footer__legal container">
+            <small>&copy; 2025 The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</small>
+            <ul>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Términos</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="/scripts/main.js"></script>
+</body>
+</html>
