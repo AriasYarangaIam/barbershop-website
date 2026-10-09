@@ -1229,17 +1229,332 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Reserva (Booking) — .booking__grid, .booking__form, .booking__slots,
-                       .booking__pole, .booking__info, .slots
+   Equipo — .portfolio-preview, .testimonials
    ========================================================================== */
 
-/* --- Formulario de Reserva --- */
+/* --- Portfolio Preview --- */
+.portfolio-preview {
+    padding-block: var(--section-gap);
+}
+
+.portfolio-preview__grid {
+    display: grid;
+    gap: var(--sp-md);
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+    .portfolio-preview__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .portfolio-preview__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.portfolio-preview__item {
+    position: relative;
+    border-radius: var(--r-media);
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+}
+
+.portfolio-preview__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--dur-slow) var(--ease-out);
+}
+
+.portfolio-preview__item:hover img {
+    transform: scale(1.02);
+}
+
+.portfolio-preview__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--sp-md);
+    background: linear-gradient(transparent 40%, rgba(0, 0, 0, 0.7));
+    opacity: 0;
+    transition: opacity var(--dur-base) var(--ease-out);
+}
+
+.portfolio-preview__item:hover .portfolio-preview__overlay {
+    opacity: 1;
+}
+
+.portfolio-preview__tag {
+    font-family: var(--font-mono);
+    font-size: var(--fs-label);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+}
+
+.portfolio-preview__title {
+    font-size: var(--fs-h3);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* --- Testimonials --- */
+.testimonials {
+    padding-block: var(--section-gap);
+}
+
+.testimonials__grid {
+    display: grid;
+    gap: var(--sp-lg);
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+    .testimonials__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.testimonial-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-card);
+    padding: var(--sp-lg);
+    box-shadow: var(--shadow-1);
+    transition: transform var(--dur-base) var(--ease-out);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-2);
+}
+
+.testimonial-card blockquote {
+    margin: 0;
+    font-size: var(--fs-body);
+    line-height: 1.55;
+    margin-bottom: var(--sp-md);
+}
+
+.testimonial-card figcaption {
+    color: var(--text-secondary);
+    font-size: var(--fs-small);
+}
+
+.testimonial-card cite {
+    color: var(--text-primary);
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Reserva (Booking) — .booking__grid, .form-card, .booking__pole, .slots, .booking__info
+   ========================================================================== */
+
+/* --- Grid de reserva --- */
+.booking__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sp-xl);
+    padding-bottom: var(--section-gap);
+}
+
+@media (min-width: 1024px) {
+    .booking__grid {
+        grid-template-columns: 7fr auto 5fr;
+        align-items: start;
+    }
+}
+
+/* --- Formulario --- */
+.form-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-card);
+    box-shadow: var(--shadow-1);
+    padding: var(--sp-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-md);
+}
+
+@media (min-width: 1024px) {
+    .form-card {
+        padding: var(--sp-xl);
+    }
+}
+
+.booking__submit {
+    width: 100%;
+}
+
+.booking__submit.is-loading {
+    position: relative;
+    color: transparent;
+}
+
+.booking__submit.is-loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
 
 /* --- Barber Pole Vertical --- */
+.booking__pole {
+    display: none;
+    width: 4px;
+    border-radius: 999px;
+    background: repeating-linear-gradient(
+        180deg,
+        var(--accent) 0 25%,
+        var(--surface) 25% 51%,
+        var(--text-primary) 51% 76%,
+        var(--accent) 76% 100%
+    );
+    background-size: 100% 200%;
+    animation: pole-mini-flow 2s linear infinite;
+    justify-self: center;
+}
 
-/* --- Selector de Horarios --- */
+@media (min-width: 1024px) {
+    .booking__pole {
+        display: block;
+        min-height: 100%;
+    }
+}
 
-/* --- Info Box --- */
+/* --- Selector de horarios --- */
+.booking__slots h2 {
+    font-size: var(--fs-h2);
+    font-weight: 600;
+    margin-bottom: var(--sp-sm);
+}
+
+.booking__slots-date {
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: var(--fs-small);
+    margin-bottom: var(--sp-lg);
+}
+
+.slots {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-sm);
+}
+
+@media (min-width: 1024px) {
+    .slots {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.slot {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 0 var(--sp-sm);
+    border-radius: var(--r-control);
+    border: 1px solid var(--border);
+    background-color: var(--surface);
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: var(--fs-small);
+    font-variant-numeric: tabular-nums;
+    cursor: pointer;
+    transition: background-color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+
+.slot:hover {
+    background-color: var(--surface-subtle);
+}
+
+.slot.is-selected {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--text-on-primary);
+}
+
+.slot.is-last {
+    background-color: var(--warning-surface);
+    border-color: var(--warning);
+    color: var(--warning);
+}
+
+.slot.is-occupied {
+    opacity: 0.4;
+    cursor: not-allowed;
+    background-color: transparent;
+}
+
+.slots__legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-md);
+    margin-top: var(--sp-lg);
+    font-size: var(--fs-small);
+    color: var(--text-secondary);
+}
+
+.slots__legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-xs);
+}
+
+.slots__legend .badge {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+}
+
+.slots__legend .badge--free {
+    background-color: var(--surface);
+}
+
+.slots__legend .badge--last {
+    background-color: var(--warning-surface);
+    border-color: var(--warning);
+}
+
+.slots__legend .badge--occupied {
+    background-color: transparent;
+    opacity: 0.4;
+}
+
+/* --- Info box --- */
+.booking__info {
+    background-color: var(--info-surface);
+    border: 1px solid var(--info);
+    border-radius: var(--r-card);
+    padding: var(--sp-lg);
+    color: var(--text-primary);
+    margin-bottom: var(--section-gap);
+}
+
+.booking__info p {
+    margin: 0;
+}
+
+.booking__info p + p {
+    margin-top: var(--sp-sm);
+}
 
 /* ==========================================================================
    CTA Band — .cta-band (Call-to-Action Section)

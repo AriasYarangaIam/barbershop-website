@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <title>Reserva — The Rustic Barber Shop | Lima Peru</title>
+    <meta name="description" content="Reserva tu turno en The Rustic Barber Shop en tres pasos. Elige servicio, barbero y horario. Te confirmamos por WhatsApp.">
+    <link rel="canonical" href="https://therusticbarbershop.com/reserva">
+    <meta property="og:title" content="Reserva — The Rustic Barber Shop">
+    <meta property="og:description" content="Reserva tu corte, barba o afeitado en Lima. Servicio, barbero y horario en tres pasos.">
+    <meta property="og:image" content="https://therusticbarbershop.com/og/hero.jpg">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#C5A059">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "The Rustic Barber Shop",
+        "image": "https://therusticbarbershop.com/og/hero.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Siempreviva 742",
+            "addressLocality": "Lima",
+            "addressCountry": "PE"
+        },
+        "telephone": "+51123456789",
+        "priceRange": "$$",
+        "openingHours": ["Mo-Fr 09:00-20:00", "Sa 10:00-18:00"]
+    }
+    </script>
+</head>
+<body>
+    <a href="#main" class="skip-link">Ir a contenido principal</a>
+    <header class="topbar" role="banner">
+        <div class="topbar__inner container">
+            <a class="brand" href="/" aria-label="The Rustic Barber Shop — inicio">
+                <span class="brand__pole" aria-hidden="true"></span>
+                <span class="brand__wordmark">The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</span>
+            </a>
+            <nav class="nav" aria-label="Navegación principal">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="/">Inicio</a></li>
+                    <li><a class="nav__link" href="/servicios">Servicios</a></li>
+                    <li><a class="nav__link" href="/equipo">Equipo</a></li>
+                    <li><a class="nav__link" href="/galeria">Galería</a></li>
+                    <li><a class="nav__link" href="/reserva" aria-current="page">Reserva</a></li>
+                    <li><a class="nav__link" href="/contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn--primary topbar__cta" href="/reserva">Reservar turno</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Abrir menú">
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menú de navegación" hidden>
+        <div class="mobile-drawer__overlay" data-drawer-close aria-hidden="true"></div>
+        <div class="mobile-drawer__panel">
+            <div class="mobile-drawer__head">
+                <span class="brand__pole" aria-hidden="true"></span>
+                <span class="mobile-drawer__title">The Rustic Barber Shop</span>
+                <button class="mobile-drawer__close" type="button" aria-label="Cerrar menú" data-drawer-close>
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <nav aria-label="Navegación móvil">
+                <ul class="mobile-drawer__list">
+                    <li><a class="mobile-drawer__link" href="/">Inicio</a></li>
+                    <li><a class="mobile-drawer__link" href="/servicios">Servicios</a></li>
+                    <li><a class="mobile-drawer__link" href="/equipo">Equipo</a></li>
+                    <li><a class="mobile-drawer__link" href="/galeria">Galería</a></li>
+                    <li><a class="mobile-drawer__link" href="/reserva" aria-current="page">Reserva</a></li>
+                    <li><a class="mobile-drawer__link" href="/contacto">Contacto</a></li>
+                    <li><a class="mobile-drawer__link" href="/nosotros">Nosotros</a></li>
+                    <li><a class="mobile-drawer__link" href="/login">Ingresar</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn--accent mobile-drawer__cta" href="/reserva">Reservar turno</a>
+        </div>
+    </div>
+
+    <main id="main" class="page page--booking">
+        <header class="page-header container">
+            <p class="eyebrow"><span class="eyebrow__pole" aria-hidden="true"></span>Reserva</p>
+            <h1>Reserva tu turno</h1>
+            <p class="page-header__lede">Tres pasos. Te llega confirmación por WhatsApp.</p>
+        </header>
+
+        <hr class="barber-pole" aria-hidden="true">
+
+        <div class="booking__grid container">
+            <section class="booking__form" aria-labelledby="booking-title">
+                <h2 class="visually-hidden" id="booking-title">Formulario de reserva</h2>
+                <form class="form-card" action="#" method="post">
+                    <div class="field">
+                        <label for="name">Tu nombre</label>
+                        <input id="name" name="full_name" type="text" autocomplete="name" placeholder="Ej. Martín López…" required>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Teléfono (WhatsApp)</label>
+                        <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Ej. 11 2345 6789…" required>
+                    </div>
+                    <div class="field">
+                        <label for="service">Servicio</label>
+                        <select id="service" name="service" required>
+                            <option value="" selected disabled>Selecciona un servicio…</option>
+                            <option value="corte-clasico">Corte Clásico</option>
+                            <option value="corte-barba">Corte + Barba</option>
+                            <option value="afeitado-tradicional">Afeitado Tradicional</option>
+                            <option value="coloracion">Coloración</option>
+                            <option value="limpieza-facial">Limpieza Facial</option>
+                            <option value="corte-junior">Corte Junior</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="barber">Barbero</label>
+                        <select id="barber" name="barber">
+                            <option value="cualquiera" selected>Cualquiera</option>
+                            <option value="marco">Marco</option>
+                            <option value="diego">Diego</option>
+                            <option value="lucia">Lucía</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="date">Fecha</label>
+                        <input id="date" name="date" type="date" required>
+                    </div>
+                    <button class="btn btn--primary booking__submit" type="submit" data-loading="Cargando…">Confirmar turno</button>
+                </form>
+            </section>
+
+            <span class="booking__pole" aria-hidden="true"></span>
+
+            <aside class="booking__slots" aria-labelledby="slots-title">
+                <h2 id="slots-title">Horarios disponibles</h2>
+                <p class="booking__slots-date">— fecha seleccionada —</p>
+                <div class="slots" role="group" aria-label="Horarios">
+                    <button class="slot" type="button">09:00</button>
+                    <button class="slot" type="button">09:30</button>
+                    <button class="slot is-last" type="button" aria-label="09:45, último lugar">09:45</button>
+                    <button class="slot" type="button">10:00</button>
+                    <button class="slot is-occupied" type="button" disabled aria-disabled="true">10:30</button>
+                    <button class="slot" type="button">11:00</button>
+                    <button class="slot is-occupied" type="button" disabled aria-disabled="true">11:30</button>
+                    <button class="slot" type="button">12:00</button>
+                    <button class="slot is-last" type="button" aria-label="12:30, último lugar">12:30</button>
+                    <button class="slot" type="button">16:00</button>
+                    <button class="slot is-occupied" type="button" disabled aria-disabled="true">16:30</button>
+                    <button class="slot" type="button">17:00</button>
+                </div>
+                <div class="slots__legend">
+                    <span><span class="badge badge--free" aria-hidden="true"></span>Libre</span>
+                    <span><span class="badge badge--last" aria-hidden="true"></span>Último lugar</span>
+                    <span><span class="badge badge--occupied" aria-hidden="true"></span>Ocupado</span>
+                </div>
+            </aside>
+        </div>
+
+        <div class="booking__info container" role="status">
+            <p><strong>Horarios de atención:</strong> Lun–Vie 09:00–20:00 · Sáb 10:00–18:00 · Dom cerrado.</p>
+            <p>Llega 5 min antes.</p>
+        </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container site-footer__grid">
+            <div class="site-footer__brand">
+                <span class="brand__pole" aria-hidden="true"></span>
+                <p class="site-footer__wordmark">The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</p>
+                <p class="site-footer__tagline">Cortes con carácter. Formación con alma.</p>
+                <a class="site-footer__about" href="/nosotros">Conoce la historia →</a>
+            </div>
+            <nav class="site-footer__nav" aria-label="Navegación secundaria">
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/servicios">Servicios</a></li>
+                    <li><a href="/equipo">Equipo</a></li>
+                    <li><a href="/galeria">Galería</a></li>
+                    <li><a href="/reserva">Reserva</a></li>
+                    <li><a href="/contacto">Contacto</a></li>
+                    <li><a href="/nosotros">Nosotros</a></li>
+                    <li><a href="/login">Ingresar</a></li>
+                </ul>
+            </nav>
+            <address class="site-footer__contact">
+                <p>Av. Siempreviva 742, Lima, Peru</p>
+                <p><a href="tel:+51123456789">+51 1 234 5678</a></p>
+                <p><a href="https://instagram.com/therusticbarbershop" rel="noopener noreferrer">@therusticbarbershop</a></p>
+                <p class="site-footer__hours">Lun–Vie 09:00–20:00 · Sáb 10:00–18:00 · Dom cerrado</p>
+            </address>
+        </div>
+        <div class="site-footer__legal container">
+            <small>&copy; 2025 The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</small>
+            <ul>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Términos</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/reserva.js"></script>
+</body>
+</html>
