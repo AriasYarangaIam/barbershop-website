@@ -985,7 +985,248 @@ ul, ol {
 
 /* --- Info de contacto y mapa --- */
 
+/* Encabezado de página: título y firma visual. */
+.page-header {
+    padding-block: var(--sp-2xl) var(--sp-lg);
+}
+
+.page-header h1 {
+    font-size: var(--fs-h1);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.page-header .barber-pole {
+    margin-top: var(--sp-lg);
+}
+
+/* Rejilla principal: apilada en móvil, dos columnas desde lg. */
+.contact__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sp-2xl);
+    padding-bottom: var(--section-gap);
+}
+
+@media (min-width: 1024px) {
+    .contact__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--sp-3xl);
+        align-items: start;
+    }
+}
+
+/* Columna izquierda: bloques de información apilados. */
+.contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-gap);
+}
+
+.contact__info h2 {
+    font-size: var(--fs-h2);
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: var(--sp-md);
+}
+
+/* Lista de datos de contacto. */
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-md);
+    font-style: normal;
+}
+
+.contact-list p {
+    color: var(--text-secondary);
+    font-size: var(--fs-small);
+}
+
+.contact-list strong {
+    display: block;
+    margin-bottom: var(--sp-xs);
+    font-family: var(--font-mono);
+    font-size: var(--fs-label);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+.contact-list a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    color: var(--primary);
+}
+
+/* Tarjeta de horarios con tabla semántica. */
+.hours-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-control);
+    box-shadow: var(--shadow-1);
+    padding: var(--sp-lg);
+}
+
+.hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-mono);
+    font-size: var(--fs-small);
+    font-variant-numeric: tabular-nums;
+}
+
+.hours-table th,
+.hours-table td {
+    padding-block: var(--sp-sm);
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.hours-table tbody tr:last-child th,
+.hours-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.hours-table thead th {
+    font-size: var(--fs-label);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+}
+
+.hours-table tbody th[scope="row"] {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.hours-table td {
+    text-align: right;
+    color: var(--text-secondary);
+}
+
+/* Fila de cierre destacada en color primario. */
+.hours-table tbody tr:last-child td {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Mapa incrustado con proporción fluida. */
+.map-embed {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--r-media);
+    background-color: var(--surface-subtle);
+    aspect-ratio: 4 / 3;
+}
+
+.map-embed iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (min-width: 1024px) {
+    .map-embed {
+        aspect-ratio: 16 / 9;
+    }
+}
+
 /* --- Formulario --- */
+
+/* Tarjeta del formulario de contacto. */
+.contact-form-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-card);
+    box-shadow: var(--shadow-1);
+    padding: var(--sp-lg);
+}
+
+@media (min-width: 1024px) {
+    .contact-form-card {
+        padding: var(--sp-xl);
+    }
+}
+
+.contact-form-card h2 {
+    font-size: var(--fs-h2);
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: var(--sp-sm);
+}
+
+.contact-form-card > p {
+    color: var(--text-secondary);
+    font-size: var(--fs-small);
+    margin-bottom: var(--sp-lg);
+}
+
+.contact-form-card > p a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contact-form-card > p a:hover {
+    color: var(--accent);
+}
+
+.contact-form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-md);
+}
+
+/* Campo de formulario: etiqueta y control apilados. */
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-sm);
+}
+
+.field label {
+    font-size: var(--fs-small);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    min-height: 44px;
+    padding: 12px var(--sp-md);
+    font: inherit;
+    font-size: var(--fs-body);
+    color: var(--text-primary);
+    background-color: var(--surface-subtle);
+    border: 1px solid var(--border);
+    border-radius: var(--r-control);
+}
+
+.field textarea {
+    min-height: 0;
+    resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: var(--text-tertiary);
+}
+
+/* Botón de envío a ancho completo de la tarjeta. */
+.contact-form-card__submit {
+    width: 100%;
+}
 
 /* ==========================================================================
    Reserva (Booking) — .booking__grid, .booking__form, .booking__slots,
