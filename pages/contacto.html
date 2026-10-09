@@ -3,105 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-    <title>Contacto — Barbería Urbana | Escribenos o reserva tu turno</title>
-    <meta name="description" content="Contactá a Barbería Urbana en Springfield. Escríbenos, consultá horarios o reservá tu turno online.">
-    <link rel="canonical" href="https://barberiaurbana.com/contacto.html">
-    <meta property="og:title" content="Contacto — Barbería Urbana">
-    <meta property="og:description" content="Contactá a Barbería Urbana en Springfield. Escríbenos, consultá horarios o reservá tu turno online.">
-    <meta property="og:image" content="https://barberiaurbana.com/og/hero.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <title>Contacto — The Rustic Barber Shop | Lima Peru</title>
+    <meta name="description" content="¿Tienes dudas o quieres reservar tu turno? Escríbenos, consulta nuestros horarios y visítanos en Lima. Te respondemos a la brevedad.">
+    <link rel="canonical" href="https://therusticbarbershop.com/contacto">
+    <meta property="og:title" content="Contacto — The Rustic Barber Shop">
+    <meta property="og:description" content="Escríbenos, consulta nuestros horarios o reserva tu turno online. Te esperamos en Lima.">
+    <meta property="og:image" content="https://therusticbarbershop.com/og/hero.jpg">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#8B6B12">
+    <meta name="theme-color" content="#C5A059">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "HairSalon",
-        "name": "Barbería Urbana",
-        "image": "https://barberiaurbana.com/og/hero.jpg",
+        "name": "The Rustic Barber Shop",
+        "image": "https://therusticbarbershop.com/og/hero.jpg",
         "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Av. Siempreviva 742",
-        "addressLocality": "Springfield",
-        "addressCountry": "AR"
-    },
-        "telephone": "+541155554444",
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Siempreviva 742",
+            "addressLocality": "Lima",
+            "addressCountry": "PE"
+        },
+        "telephone": "+51123456789",
         "priceRange": "$$",
-        "openingHours": "Tu-Sa 10:00-20:00"
+        "openingHours": ["Mo-Fr 09:00-20:00", "Sa 10:00-18:00"]
     }
     </script>
 </head>
 <body>
     <a href="#main" class="skip-link">Ir a contenido principal</a>
-
     <header class="topbar" role="banner">
         <div class="topbar__inner container">
-            <a class="brand" href="/" aria-label="Barbería Urbana - Inicio">
+            <a class="brand" href="../index.html" aria-label="The Rustic Barber Shop — inicio">
                 <span class="brand__pole" aria-hidden="true"></span>
-                <span class="brand__wordmark">Barbería&nbsp;Urbana</span>
+                <span class="brand__wordmark">The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</span>
             </a>
-
             <nav class="nav" aria-label="Navegación principal">
                 <ul class="nav__list">
-                    <li><a class="nav__link" href="/">Inicio</a></li>
-                    <li><a class="nav__link" href="/contacto" aria-current="page">Contacto</a></li>
-                    <li><a class="nav__link" href="/login">Ingresar</a></li>
+                    <li><a class="nav__link" href="../index.html">Inicio</a></li>
+                    <li><a class="nav__link" href="servicios.html">Servicios</a></li>
+                    <li><a class="nav__link" href="equipo.html">Equipo</a></li>
+                    <li><a class="nav__link" href="galeria.html">Galería</a></li>
+                    <li><a class="nav__link" href="reserva.html">Reserva</a></li>
+                    <li><a class="nav__link" href="contacto.html" aria-current="page">Contacto</a></li>
                 </ul>
             </nav>
+            <a class="btn btn--primary topbar__cta" href="reserva.html">Reservar turno</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Abrir menú">
+                <span aria-hidden="true"></span>
+            </button>
         </div>
     </header>
+
+    <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menú de navegación" hidden>
+        <div class="mobile-drawer__overlay" data-drawer-close aria-hidden="true"></div>
+        <div class="mobile-drawer__panel">
+            <div class="mobile-drawer__head">
+                <span class="brand__pole" aria-hidden="true"></span>
+                <span class="mobile-drawer__title">The Rustic Barber Shop</span>
+                <button class="mobile-drawer__close" type="button" aria-label="Cerrar menú" data-drawer-close>
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <nav aria-label="Navegación móvil">
+                <ul class="mobile-drawer__list">
+                    <li><a class="mobile-drawer__link" href="../index.html">Inicio</a></li>
+                    <li><a class="mobile-drawer__link" href="servicios.html">Servicios</a></li>
+                    <li><a class="mobile-drawer__link" href="equipo.html">Equipo</a></li>
+                    <li><a class="mobile-drawer__link" href="galeria.html">Galería</a></li>
+                    <li><a class="mobile-drawer__link" href="reserva.html">Reserva</a></li>
+                    <li><a class="mobile-drawer__link" href="contacto.html" aria-current="page">Contacto</a></li>
+                    <li><a class="mobile-drawer__link" href="nosotros.html">Nosotros</a></li>
+                    <li><a class="mobile-drawer__link" href="login.html">Ingresar</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn--accent mobile-drawer__cta" href="reserva.html">Reservar turno</a>
+        </div>
+    </div>
 
     <main id="main" class="page page--contact">
         <header class="page-header container">
             <h1>Contacto</h1>
             <hr class="barber-pole" aria-hidden="true">
         </header>
+
         <div class="container contact__grid">
             <div class="contact__info">
                 <section aria-labelledby="info-title">
                     <h2 id="info-title">Estamos aquí</h2>
                     <address class="contact-list">
-                        <p><span aria-hidden="true">📍</span> <strong>Dirección</strong><br>Av. Siempreviva 742, Springfield, CP 12345</p>
-                        <p><span aria-hidden="true">📞</span> <strong>Teléfono</strong><br><a href="tel:+541155554444">+54 11 5555-4444</a></p>
-                        <p><span aria-hidden="true">✉</span> <strong>Email</strong><br><a href="mailto:info@barberiaurbana.com">info@barberiaurbana.com</a></p>
-                        <p><span aria-hidden="true">🅾</span> <strong>Instagram</strong><br><a href="https://instagram.com/barberiaurbana" rel="noopener noreferrer">@barberiaurbana</a></p>
+                        <p><span aria-hidden="true"><!-- pin --></span> <strong>Dirección</strong><br>Av. Siempreviva 742, Lima, Peru</p>
+                        <p><span aria-hidden="true"><!-- phone --></span> <strong>Teléfono</strong><br><a href="tel:+51123456789">+51 1 234 5678</a></p>
+                        <p><span aria-hidden="true"><!-- mail --></span> <strong>Email</strong><br><a href="mailto:info@therusticbarbershop.com">info@therusticbarbershop.com</a></p>
+                        <p><span aria-hidden="true"><!-- instagram --></span> <strong>Instagram</strong><br><a href="https://instagram.com/therusticbarbershop" rel="noopener noreferrer">@therusticbarbershop</a></p>
                     </address>
                 </section>
 
                 <section class="hours-card" aria-labelledby="hours-title">
-                    <h2 id="hours-title">Horarios de atención</h2>
+                    <h2 id="hours-title">Horarios</h2>
                     <table class="hours-table">
-                        <caption class="visually-hidden">Horarios de atención de Barbería Urbana</caption>
+                        <caption class="visually-hidden">Horarios de atención de The Rustic Barber Shop</caption>
                         <thead>
-                            <tr>
-                                <th scope="col">Día</th>
-                                <th scope="col">Horario</th>
-                            </tr>
+                            <tr><th scope="col">Día</th><th scope="col">Horario</th></tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">Lunes – Viernes</th><td>09:00 – 20:00</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Sábados</th><td>10:00 – 18:00</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Domingos</th><td>Cerrado</td>
-                            </tr>
+                            <tr><th scope="row">Lunes – Viernes</th><td>09:00 – 20:00</td></tr>
+                            <tr><th scope="row">Sábados</th><td>10:00 – 18:00</td></tr>
+                            <tr><th scope="row">Domingos</th><td>Cerrado</td></tr>
                         </tbody>
                     </table>
                 </section>
 
-                    <figure class="contact__photo">
-                        <img src="/images/barber-cut.jpg" alt="Barbero realizando un corte de precisión con máquina en la nuca de un cliente" width="600" height="800" loading="lazy">
-                        <figcaption class="visually-hidden">Corte de precisión en Barbería Urbana</figcaption>
-                    </figure>
-
-                    <figure class="map-embed">
-                        <iframe src="https://www.google.com/maps/embed?…" title="Mapa de ubicación de Barbería Urbana" loading="lazy"></iframe>
-                    </figure>
+                <figure class="map-embed">
+                    <iframe src="https://www.google.com/maps/embed?…" title="Mapa de ubicación de The Rustic Barber Shop" loading="lazy"></iframe>
+                </figure>
             </div>
 
             <section class="contact-form-card" aria-labelledby="form-title">
@@ -114,7 +132,7 @@
                     </div>
                     <div class="field">
                         <label for="email">Correo electrónico</label>
-                        <input id="email" name="email" type="email" autocomplete="email" placeholder="fabricio@ejemplo.com…">
+                        <input id="email" name="email" type="email" autocomplete="email" placeholder="juan@ejemplo.com…">
                     </div>
                     <div class="field">
                         <label for="subject">Asunto</label>
@@ -140,33 +158,38 @@
         <div class="container site-footer__grid">
             <div class="site-footer__brand">
                 <span class="brand__pole" aria-hidden="true"></span>
-                <p class="site-footer__wordmark">Barbería&nbsp;Urbana</p>
-                <p class="site-footer__tagline">Cortes con carácter.</p>
+                <p class="site-footer__wordmark">The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</p>
+                <p class="site-footer__tagline">Cortes con carácter. Formación con alma.</p>
+                <a class="site-footer__about" href="nosotros.html">Conoce la historia →</a>
             </div>
-
             <nav class="site-footer__nav" aria-label="Navegación secundaria">
                 <ul>
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/contacto">Contacto</a></li>
-                    <li><a href="/login">Ingresar</a></li>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="equipo.html">Equipo</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="reserva.html">Reserva</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="login.html">Ingresar</a></li>
                 </ul>
             </nav>
-
             <address class="site-footer__contact">
-                <p>Av. Siempreviva 742, Springfield</p>
-                <p><a href="tel:+541155554444">+54 11 5555-4444</a></p>
-                <p><a href="https://instagram.com/barberiaurbana" rel="noopener noreferrer">@barberiaurbana</a></p>
-                <p class="site-footer__hours">Mar–Sáb · 10–20hs</p>
+                <p>Av. Siempreviva 742, Lima, Peru</p>
+                <p><a href="tel:+51123456789">+51 1 234 5678</a></p>
+                <p><a href="https://instagram.com/therusticbarbershop" rel="noopener noreferrer">@therusticbarbershop</a></p>
+                <p class="site-footer__hours">Lun–Vie 09:00–20:00 · Sáb 10:00–18:00 · Dom cerrado</p>
             </address>
         </div>
-
         <div class="site-footer__legal container">
-            <small>&copy; 2025 Barbería&nbsp;Urbana</small>
+            <small>&copy; 2025 The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</small>
             <ul>
                 <li><a href="#">Política de privacidad</a></li>
                 <li><a href="#">Términos</a></li>
             </ul>
         </div>
     </footer>
+
+    <script src="../scripts/main.js"></script>
 </body>
 </html>
