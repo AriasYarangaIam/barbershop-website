@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <title>Equipo — The Rustic Barber Shop | Conoce a tus barberos</title>
+    <meta name="description" content="Conoce al equipo de The Rustic Barber Shop: Marco, Diego y Lucía. Especialistas en fade, tijera y afeitado tradicional. Reserva con tu barbero favorito.">
+    <link rel="canonical" href="https://therusticbarbershop.com/equipo">
+    <meta property="og:title" content="Equipo — The Rustic Barber Shop">
+    <meta property="og:description" content="Tres barberos, tres estilos. Elige con quién reservar.">
+    <meta property="og:image" content="https://therusticbarbershop.com/og/hero.jpg">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0D0D0D">
+</head>
+<body>
+    <a href="#main" class="skip-link">Ir a contenido principal</a>
+    <header class="topbar" role="banner">
+        <div class="topbar__inner container">
+            <a class="brand" href="/" aria-label="The Rustic Barber Shop — inicio">
+                <span class="brand__pole" aria-hidden="true"></span>
+                <span class="brand__wordmark">The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</span>
+            </a>
+            <nav class="nav" aria-label="Navegación principal">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="/">Inicio</a></li>
+                    <li><a class="nav__link" href="/servicios">Servicios</a></li>
+                    <li><a class="nav__link" href="/equipo" aria-current="page">Equipo</a></li>
+                    <li><a class="nav__link" href="/galeria">Galería</a></li>
+                    <li><a class="nav__link" href="/reserva">Reserva</a></li>
+                    <li><a class="nav__link" href="/contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn--primary topbar__cta" href="/reserva">Reservar turno</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Abrir menú">
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menú de navegación" hidden>
+        <div class="mobile-drawer__overlay" data-drawer-close aria-hidden="true"></div>
+        <div class="mobile-drawer__panel">
+            <div class="mobile-drawer__head">
+                <span class="brand__pole" aria-hidden="true"></span>
+                <span class="mobile-drawer__title">The Rustic Barber Shop</span>
+                <button class="mobile-drawer__close" type="button" aria-label="Cerrar menú" data-drawer-close>
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <nav aria-label="Navegación móvil">
+                <ul class="mobile-drawer__list">
+                    <li><a class="mobile-drawer__link" href="/">Inicio</a></li>
+                    <li><a class="mobile-drawer__link" href="/servicios">Servicios</a></li>
+                    <li><a class="mobile-drawer__link" href="/equipo" aria-current="page">Equipo</a></li>
+                    <li><a class="mobile-drawer__link" href="/galeria">Galería</a></li>
+                    <li><a class="mobile-drawer__link" href="/reserva">Reserva</a></li>
+                    <li><a class="mobile-drawer__link" href="/contacto">Contacto</a></li>
+                    <li><a class="mobile-drawer__link" href="/nosotros">Nosotros</a></li>
+                    <li><a class="mobile-drawer__link" href="/login">Ingresar</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn--accent mobile-drawer__cta" href="/reserva">Reservar turno</a>
+        </div>
+    </div>
+
+    <main id="main" class="page page--team">
+        <section class="page-head container" aria-labelledby="team-title">
+            <p class="eyebrow"><span class="eyebrow__pole" aria-hidden="true"></span>Equipo</p>
+            <h1 class="page-head__title" id="team-title">Las manos detrás del corte</h1>
+            <p class="page-head__lede">Tres barberos, tres estilos. Conoce a quien se va a encargar de tu look y reserva directamente con él o ella.</p>
+        </section>
+
+        <hr class="barber-pole" aria-hidden="true">
+
+        <section class="team container" aria-label="Barberos">
+            <ul class="team__list" role="list">
+
+                <li class="team-member">
+                    <div class="team-member__media">
+                        <img src="images/marco.jpg" alt="Retrato de Marco, barbero especialista en fade y barba" width="560" height="700" loading="lazy"
+                            onerror="if(this.src!=='images/barber-cut.jpg'){this.src='images/barber-cut.jpg';this.alt='Imagen de respaldo del equipo de The Rustic Barber Shop';}">
+                    </div>
+                    <div class="team-member__body">
+                        <p class="team-member__role">Barbero senior</p>
+                        <h2 class="team-member__name">Marco</h2>
+                        <p class="team-member__rating" aria-label="Valoración 4.9 de 5"><span aria-hidden="true">★★★★★</span> 4.9/5</p>
+                        <p class="team-member__bio">Más de 10 años detrás de la silla. Marco es el referente en degradados limpios y perfilado de barba. Se toma el tiempo de entender qué buscas antes de tocar la máquina.</p>
+                        <ul class="team-member__tags" role="list" aria-label="Especialidades de Marco">
+                            <li>Fade</li>
+                            <li>Barba</li>
+                            <li>Perfilado</li>
+                        </ul>
+                        <dl class="team-member__meta">
+                            <div>
+                                <dt>Servicios</dt>
+                                <dd>Corte Clásico · Corte + Barba</dd>
+                            </div>
+                            <div>
+                                <dt>Disponible</dt>
+                                <dd>Lun–Vie 09:00–20:00</dd>
+                            </div>
+                        </dl>
+                        <a class="btn btn--accent" href="/reserva?barbero=marco">Reservar con Marco</a>
+                    </div>
+                </li>
+
+                <li class="team-member">
+                    <div class="team-member__media">
+                        <img src="images/diego.jpg" alt="Retrato de Diego, barbero especialista en tijera y textura" width="560" height="700" loading="lazy"
+                            onerror="if(this.src!=='images/barber-cut.jpg'){this.src='images/barber-cut.jpg';this.alt='Imagen de respaldo del equipo de The Rustic Barber Shop';}">
+                    </div>
+                    <div class="team-member__body">
+                        <p class="team-member__role">Barbero &amp; instructor</p>
+                        <h2 class="team-member__name">Diego</h2>
+                        <p class="team-member__rating" aria-label="Valoración 4.8 de 5"><span aria-hidden="true">★★★★★</span> 4.8/5</p>
+                        <p class="team-member__bio">Especialista en corte a tijera y texturizado. Diego trabaja cada corte según la forma del rostro y el tipo de cabello, y además enseña en nuestra academia de barbería.</p>
+                        <ul class="team-member__tags" role="list" aria-label="Especialidades de Diego">
+                            <li>Tijera</li>
+                            <li>Textura</li>
+                            <li>Corte clásico</li>
+                        </ul>
+                        <dl class="team-member__meta">
+                            <div>
+                                <dt>Servicios</dt>
+                                <dd>Corte Clásico · Corte + Barba</dd>
+                            </div>
+                            <div>
+                                <dt>Disponible</dt>
+                                <dd>Lun–Sáb 10:00–18:00</dd>
+                            </div>
+                        </dl>
+                        <a class="btn btn--accent" href="/reserva?barbero=diego">Reservar con Diego</a>
+                    </div>
+                </li>
+
+                <li class="team-member">
+                    <div class="team-member__media">
+                        <img src="images/lucia.jpg" alt="Retrato de Lucía, barbera especialista en afeitado tradicional" width="560" height="700" loading="lazy"
+                            onerror="if(this.src!=='images/barber-cut.jpg'){this.src='images/barber-cut.jpg';this.alt='Imagen de respaldo del equipo de The Rustic Barber Shop';}">
+                    </div>
+                    <div class="team-member__body">
+                        <p class="team-member__role">Maestra barbera</p>
+                        <h2 class="team-member__name">Lucía</h2>
+                        <p class="team-member__rating" aria-label="Valoración 5.0 de 5"><span aria-hidden="true">★★★★★</span> 5.0/5</p>
+                        <p class="team-member__bio">Navaja en mano, Lucía convierte el afeitado en un ritual: toalla caliente, espuma y cuidado de la piel. Si buscas el afeitado clásico de verdad, es tu persona.</p>
+                        <ul class="team-member__tags" role="list" aria-label="Especialidades de Lucía">
+                            <li>Afeitado tradicional</li>
+                            <li>Navaja</li>
+                            <li>Cuidado de piel</li>
+                        </ul>
+                        <dl class="team-member__meta">
+                            <div>
+                                <dt>Servicios</dt>
+                                <dd>Afeitado Tradicional · Corte + Barba</dd>
+                            </div>
+                            <div>
+                                <dt>Disponible</dt>
+                                <dd>Mar–Sáb 10:00–19:00</dd>
+                            </div>
+                        </dl>
+                        <a class="btn btn--accent" href="/reserva?barbero=lucia">Reservar con Lucía</a>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+
+        <hr class="barber-pole" aria-hidden="true">
+
+        <section class="team-values container" aria-labelledby="team-values-title">
+            <header class="section-head">
+                <p class="eyebrow"><span class="eyebrow__pole" aria-hidden="true"></span>Nuestra forma de trabajar</p>
+                <h2 id="team-values-title">Lo que comparte todo el equipo</h2>
+            </header>
+            <ul class="team-values__grid" role="list">
+                <li class="team-values__item">
+                    <h3>Escuchar primero</h3>
+                    <p>Cada corte empieza con una conversación sobre lo que buscas.</p>
+                </li>
+                <li class="team-values__item">
+                    <h3>Oficio y detalle</h3>
+                    <p>Tijera, navaja y paciencia. Sin atajos ni prisas.</p>
+                </li>
+                <li class="team-values__item">
+                    <h3>Formación constante</h3>
+                    <p>Practicamos y enseñamos en nuestra academia de barbería.</p>
+                </li>
+            </ul>
+        </section>
+
+        <aside class="cta-band" aria-labelledby="team-cta">
+            <div class="container cta-band__inner">
+                <div>
+                    <h2 class="cta-band__title" id="team-cta">¿Ya elegiste barbero?</h2>
+                    <p class="cta-band__text">Reserva tu silla en 30 segundos.</p>
+                </div>
+                <a class="btn btn--accent" href="/reserva">Reservar turno</a>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container site-footer__grid">
+            <div class="site-footer__brand">
+                <span class="brand__pole" aria-hidden="true"></span>
+                <p class="site-footer__wordmark">The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</p>
+                <p class="site-footer__tagline">Cortes con carácter. Formación con alma.</p>
+                <a class="site-footer__about" href="/nosotros">Conoce la historia →</a>
+            </div>
+
+            <nav class="site-footer__nav" aria-label="Navegación secundaria">
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/servicios">Servicios</a></li>
+                    <li><a href="/equipo">Equipo</a></li>
+                    <li><a href="/galeria">Galería</a></li>
+                    <li><a href="/reserva">Reserva</a></li>
+                    <li><a href="/contacto">Contacto</a></li>
+                    <li><a href="/nosotros">Nosotros</a></li>
+                    <li><a href="/login">Ingresar</a></li>
+                </ul>
+            </nav>
+
+            <address class="site-footer__contact">
+                <p>Mz K5 LT4 A.A.H.H., Atusparia, San Juan de Lurigancho 15442</p>
+                <p><a href="tel:+51985798249">+51 985 798 249</a></p>
+                <p class="site-footer__hours">Lun–Vie 09:00–20:00 · Sáb 10:00–18:00 · Dom cerrado</p>
+            </address>
+        </div>
+
+        <div class="site-footer__legal container">
+            <small>&copy; 2025 The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</small>
+            <ul>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Términos</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

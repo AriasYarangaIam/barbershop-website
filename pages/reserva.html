@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <title>Reserva tu turno — The Rustic Barber Shop</title>
+    <meta name="description" content="Reserva tu turno en The Rustic Barber Shop en 30 segundos. Elige servicio, barbero, fecha y hora.">
+    <link rel="canonical" href="https://therusticbarbershop.com/reserva">
+    <meta property="og:title" content="Reserva tu turno — The Rustic Barber Shop">
+    <meta property="og:description" content="Elige servicio, barbero, fecha y hora. Reserva en 30 segundos.">
+    <meta property="og:image" content="https://therusticbarbershop.com/og/hero.jpg">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0D0D0D">
+</head>
+<body>
+    <a href="#main" class="skip-link">Ir a contenido principal</a>
+    <header class="topbar" role="banner">
+        <div class="topbar__inner container">
+            <a class="brand" href="/" aria-label="The Rustic Barber Shop — inicio">
+                <span class="brand__pole" aria-hidden="true"></span>
+                <span class="brand__wordmark">The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</span>
+            </a>
+            <nav class="nav" aria-label="Navegación principal">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="/">Inicio</a></li>
+                    <li><a class="nav__link" href="/servicios">Servicios</a></li>
+                    <li><a class="nav__link" href="/equipo">Equipo</a></li>
+                    <li><a class="nav__link" href="/galeria">Galería</a></li>
+                    <li><a class="nav__link" href="/reserva" aria-current="page">Reserva</a></li>
+                    <li><a class="nav__link" href="/contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn--primary topbar__cta" href="/reserva">Reservar turno</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Abrir menú">
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menú de navegación" hidden>
+        <div class="mobile-drawer__overlay" data-drawer-close aria-hidden="true"></div>
+        <div class="mobile-drawer__panel">
+            <div class="mobile-drawer__head">
+                <span class="brand__pole" aria-hidden="true"></span>
+                <span class="mobile-drawer__title">The Rustic Barber Shop</span>
+                <button class="mobile-drawer__close" type="button" aria-label="Cerrar menú" data-drawer-close>
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <nav aria-label="Navegación móvil">
+                <ul class="mobile-drawer__list">
+                    <li><a class="mobile-drawer__link" href="/">Inicio</a></li>
+                    <li><a class="mobile-drawer__link" href="/servicios">Servicios</a></li>
+                    <li><a class="mobile-drawer__link" href="/equipo">Equipo</a></li>
+                    <li><a class="mobile-drawer__link" href="/galeria">Galería</a></li>
+                    <li><a class="mobile-drawer__link" href="/reserva" aria-current="page">Reserva</a></li>
+                    <li><a class="mobile-drawer__link" href="/contacto">Contacto</a></li>
+                    <li><a class="mobile-drawer__link" href="/nosotros">Nosotros</a></li>
+                    <li><a class="mobile-drawer__link" href="/login">Ingresar</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn--accent mobile-drawer__cta" href="/reserva">Reservar turno</a>
+        </div>
+    </div>
+
+    <main id="main" class="page page--booking">
+        <section class="page-head container" aria-labelledby="booking-title">
+            <p class="eyebrow"><span class="eyebrow__pole" aria-hidden="true"></span>Reserva</p>
+            <h1 class="page-head__title" id="booking-title">Reserva tu silla</h1>
+            <p class="page-head__lede">Elige servicio, barbero, fecha y hora. Te confirmamos por WhatsApp o correo.</p>
+        </section>
+
+        <hr class="barber-pole" aria-hidden="true">
+
+        <section class="booking container" aria-label="Formulario de reserva">
+            <div class="booking__grid">
+
+                <form class="booking__form" id="booking-form" novalidate>
+
+                    <fieldset class="booking__fieldset">
+                        <legend class="booking__legend"><span class="booking__step">1</span>Servicio</legend>
+                        <div class="booking__options">
+                            <label class="option">
+                                <input class="option__input" type="radio" name="servicio" value="clasico" data-duration="45" data-price="15" data-label="Corte Clásico" required>
+                                <span class="option__card">
+                                    <span class="option__title">Corte Clásico</span>
+                                    <span class="option__meta">45 min · S/ 15.00</span>
+                                </span>
+                            </label>
+                            <label class="option">
+                                <input class="option__input" type="radio" name="servicio" value="corte-barba" data-duration="75" data-price="25" data-label="Corte + Barba" checked>
+                                <span class="option__card">
+                                    <span class="option__title">Corte + Barba</span>
+                                    <span class="option__meta">75 min · S/ 25.00</span>
+                                </span>
+                            </label>
+                            <label class="option">
+                                <input class="option__input" type="radio" name="servicio" value="afeitado" data-duration="30" data-price="12" data-label="Afeitado Tradicional">
+                                <span class="option__card">
+                                    <span class="option__title">Afeitado Tradicional</span>
+                                    <span class="option__meta">30 min · S/ 12.00</span>
+                                </span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="booking__fieldset">
+                        <legend class="booking__legend"><span class="booking__step">2</span>Barbero</legend>
+                        <div class="booking__options">
+                            <label class="option">
+                                <input class="option__input" type="radio" name="barbero" value="cualquiera" data-label="Sin preferencia" checked>
+                                <span class="option__card">
+                                    <span class="option__title">Sin preferencia</span>
+                                    <span class="option__meta">El primero disponible</span>
+                                </span>
+                            </label>
+                            <label class="option">
+                                <input class="option__input" type="radio" name="barbero" value="marco" data-label="Marco">
+                                <span class="option__card">
+                                    <span class="option__title">Marco</span>
+                                    <span class="option__meta">Fade &amp; Barba</span>
+                                </span>
+                            </label>
+                            <label class="option">
+                                <input class="option__input" type="radio" name="barbero" value="diego" data-label="Diego">
+                                <span class="option__card">
+                                    <span class="option__title">Diego</span>
+                                    <span class="option__meta">Tijera &amp; Textura</span>
+                                </span>
+                            </label>
+                            <label class="option">
+                                <input class="option__input" type="radio" name="barbero" value="lucia" data-label="Lucía">
+                                <span class="option__card">
+                                    <span class="option__title">Lucía</span>
+                                    <span class="option__meta">Afeitado Tradicional</span>
+                                </span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="booking__fieldset">
+                        <legend class="booking__legend"><span class="booking__step">3</span>Fecha y hora</legend>
+                        <div class="field">
+                            <label class="field__label" for="fecha">Fecha</label>
+                            <input class="field__input" type="date" id="fecha" name="fecha" required aria-describedby="fecha-help">
+                            <p class="field__help" id="fecha-help">Atendemos de lunes a sábado. Los domingos permanecemos cerrados.</p>
+                        </div>
+                        <div class="booking__slots" aria-live="polite">
+                            <p class="field__label" id="slots-label">Horarios disponibles</p>
+                            <ul class="slots" id="slots" role="list" aria-labelledby="slots-label">
+                                <li class="slots__empty">Elige una fecha para ver los horarios.</li>
+                            </ul>
+                            <input type="hidden" name="hora" id="hora" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="booking__fieldset">
+                        <legend class="booking__legend"><span class="booking__step">4</span>Tus datos</legend>
+                        <div class="field">
+                            <label class="field__label" for="nombre">Nombre completo</label>
+                            <input class="field__input" type="text" id="nombre" name="nombre" autocomplete="name" required>
+                            <p class="field__error" data-error-for="nombre" hidden>Ingresa tu nombre.</p>
+                        </div>
+                        <div class="field-row">
+                            <div class="field">
+                                <label class="field__label" for="telefono">Teléfono / WhatsApp</label>
+                                <input class="field__input" type="tel" id="telefono" name="telefono" autocomplete="tel" inputmode="tel" placeholder="9XX XXX XXX" required>
+                                <p class="field__error" data-error-for="telefono" hidden>Ingresa un teléfono válido (9 dígitos).</p>
+                            </div>
+                            <div class="field">
+                                <label class="field__label" for="email">Correo (opcional)</label>
+                                <input class="field__input" type="email" id="email" name="email" autocomplete="email">
+                                <p class="field__error" data-error-for="email" hidden>Ingresa un correo válido.</p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label" for="notas">Notas (opcional)</label>
+                            <textarea class="field__input field__input--area" id="notas" name="notas" rows="3" placeholder="Ej.: quiero un fade bajo, referencia de foto, etc."></textarea>
+                        </div>
+                    </fieldset>
+
+                    <p class="booking__error" id="booking-error" role="alert" hidden></p>
+                    <button class="btn btn--accent booking__submit" type="submit">Confirmar reserva</button>
+                </form>
+
+                <aside class="booking__info" aria-label="Resumen de tu reserva">
+                    <span class="booking__pole" aria-hidden="true"></span>
+                    <div class="booking__info-card">
+                        <h2 class="booking__info-title">Tu reserva</h2>
+                        <dl class="summary">
+                            <div><dt>Servicio</dt><dd id="sum-servicio">—</dd></div>
+                            <div><dt>Barbero</dt><dd id="sum-barbero">—</dd></div>
+                            <div><dt>Fecha</dt><dd id="sum-fecha">—</dd></div>
+                            <div><dt>Hora</dt><dd id="sum-hora">—</dd></div>
+                            <div class="summary__total"><dt>Total</dt><dd id="sum-total">—</dd></div>
+                        </dl>
+                        <p class="booking__note">Pagas en el local. Puedes cancelar o reprogramar con 2 horas de anticipación.</p>
+                    </div>
+                    <div class="booking__info-card">
+                        <h2 class="booking__info-title">Horarios</h2>
+                        <p class="booking__hours">Lun–Vie 09:00–20:00<br>Sáb 10:00–18:00<br>Dom cerrado</p>
+                        <p class="booking__note">¿Prefieres llamar? <a href="tel:+51985798249">+51 985 798 249</a></p>
+                    </div>
+                </aside>
+
+            </div>
+
+            <div class="booking__success" id="booking-success" role="status" tabindex="-1" hidden>
+                <h2 class="booking__success-title">¡Reserva recibida!</h2>
+                <p id="success-text"></p>
+                <a class="btn btn--ghost" href="/">Volver al inicio</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container site-footer__grid">
+            <div class="site-footer__brand">
+                <span class="brand__pole" aria-hidden="true"></span>
+                <p class="site-footer__wordmark">The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</p>
+                <p class="site-footer__tagline">Cortes con carácter. Formación con alma.</p>
+                <a class="site-footer__about" href="/nosotros">Conoce la historia →</a>
+            </div>
+
+            <nav class="site-footer__nav" aria-label="Navegación secundaria">
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/servicios">Servicios</a></li>
+                    <li><a href="/equipo">Equipo</a></li>
+                    <li><a href="/galeria">Galería</a></li>
+                    <li><a href="/reserva">Reserva</a></li>
+                    <li><a href="/contacto">Contacto</a></li>
+                    <li><a href="/nosotros">Nosotros</a></li>
+                    <li><a href="/login">Ingresar</a></li>
+                </ul>
+            </nav>
+
+            <address class="site-footer__contact">
+                <p>Mz K5 LT4 A.A.H.H., Atusparia, San Juan de Lurigancho 15442</p>
+                <p><a href="tel:+51985798249">+51 985 798 249</a></p>
+                <p class="site-footer__hours">Lun–Vie 09:00–20:00 · Sáb 10:00–18:00 · Dom cerrado</p>
+            </address>
+        </div>
+
+        <div class="site-footer__legal container">
+            <small>&copy; 2025 The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</small>
+            <ul>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Términos</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/reserva.js"></script>
+</body>
+</html>
