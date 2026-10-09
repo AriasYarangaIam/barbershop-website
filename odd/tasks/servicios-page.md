@@ -27,18 +27,17 @@ Implementar completamente `pages/servicios.html` + su CSS en `styles/styles.css`
 - TDD: OFF (sitio estático, sin runner). Checks funcionales ordinarios + render local.
 - Delivery `ask-on-risk`: forecast ~300 líneas autoradas (<400) → candidato a PR único; sin `chained-pr`.
 
-## Checklist
-- [ ] T1 — `pages/servicios.html`: head (Montserrat+Mono, SEO, `/styles/styles.css`) + header/drawer + footer idénticos a `equipo.html`, `aria-current` en Servicios.
-- [ ] T2 — Page head §5.2: eyebrow "Servicios" + H1 "Lo que hacemos" + lede "Tijera y navaja. Precios claros, sin sorpresas."
-- [ ] T3 — Grid 6 service-cards (icono SVG 32px + título + desc + duración/precio), card "Corte + Barba" featured + pill.
-- [ ] T4 — Sección proceso (timeline numerado 4 pasos) + CTA band.
-- [ ] T5 — CSS "Servicios Page": `.service-card__icon`, `.process*`; responsive `1024px`.
-- [ ] T6 — Verificación: readback estructural + render; 1 commit work-unit.
-
-## Criterios de aceptación
-- `/servicios` renderiza catálogo + proceso + CTA; componentes compartidos idénticos; un solo `<h1>`; sin anchos/altos fijos de Stitch.
-- `styles/styles.css` con bloque "Servicios Page" y encabezado §5.9.
-- `git status` solo toca `pages/servicios.html`, `styles/styles.css` (+ este documento).
+## Checklist (state: COMPLETA — commit `77b6d65`)
+- [x] T1 — `pages/servicios.html`: head (Montserrat+Mono, SEO, `/styles/styles.css`) + header/drawer + footer idénticos a `equipo.html`, `aria-current="page"` en Servicios (nav + drawer).
+- [x] T2 — Page head §5.2: eyebrow "Servicios" + H1 "Lo que hacemos" + lede "Tijera y navaja. Precios claros, sin sorpresas."
+- [x] T3 — Grid 6 service-cards (icono SVG 32px `--primary` + título + desc + duración/precio en JetBrains Mono), card "Corte + Barba" featured + pill "Más pedida" (absolute 18/18, título padding-right 72px).
+- [x] T4 — Sección proceso (timeline numerado 01–04, línea conectora 1px `--border` + dots 8px `--primary` ≥1024px, grid 4col; stack 1 col mobile) + CTA band "¿Listo para un cambio?" → `/reserva`.
+- [x] T5 — CSS "Servicios Page" (`.service-card__icon`, `.process*`) insertado antes del bloque `Galería` (línea 957); variables verificadas contra styles.css.
+- [x] T6 — Verificación: readback estructural del writer + render local (Python http.server :5500 + Playwright): desktop 3col/4col, mobile 1col, drawer abre/cierra (aria-modal/aria-expanded), 1 solo `<h1>`, consola limpia (solo 404 favicon.ico preexistente). Commit work-unit `77b6d65`.
 
 ## Progreso / evidencia
-- (pendiente)
+- Estado: COMPLETA (commit `77b6d65` en `add/servicios-page`, 3 archivos, +369 líneas).
+- Verificación delegada: writer `general` (modelo default) con readback estructural completo; tier assessment `medium` (executable_change) — sin verifier extra (writer no usó perfil pequeño); spot check del parent: render real OK.
+- RDD: OFF (decisión global) → sin ceremonia de review; delivery sigue política ordinaria del repo.
+- Pendiente de producto: precios/duración propuestos para Coloración (S/35 · 60min), Limpieza Facial (S/20 · 30min) y Corte Junior (S/10 · 30min) — no están en los docs, VALIDAR con el usuario.
+- Pendiente de decisión: push/PR de `add/servicios-page` (decisión del usuario; `ask-on-risk`: 325 líneas < 400 → PR único).
