@@ -1,42 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
-    <title>Contacto - The Rustic Barberia</title>
- </head>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+        <title>Contacto - The Rustic Barberia</title>
+    </head>
     <body>
-     <a href="#main" class="skip-link">Ir a contenido principal</a>
+        <a href="#main" class="skip-link">Ir a contenido principal</a>
 
-     <header class="topbar" role="banner">
-        <div class="topbar__inner container"> 
+        <header class="topbar" role="banner">
+            <div class="topbar__inner container"> 
 
-            <a class="brand" href="index.html" aria-label="The Rustic Barberia - Inicio">
-                <span class="brand__pole" aria-hidden="true"></span>
-                <span class="brand__wordmark">The Rustic Barberia</span>
-            </a>
+                <a class="brand" href="index.html" aria-label="The Rustic Barberia - Inicio">
+                    <span class="brand__pole" aria-hidden="true"></span>
+                    <span class="brand__wordmark">The Rustic Barberia</span>
+                </a>
 
-            <nav class="nav" aria-label="Navegación principal">
-                <ul class="nav__list">
-                    <li>
-                        <a class="nav__link" href="index.html">Inicio</a>
-                    </li>
+                <nav class="nav" aria-label="Navegación principal">
+                    <ul class="nav__list">
+                        <li><a class="nav__link" href="index.html">Inicio</a></li>
+                        <li><a class="nav__link" href="servicios.html">Servicios</a></li>
+                        <li><a class="nav__link" href="equipo.html">Equipo</a></li>
+                        <li><a class="nav__link" href="galeria.html">Galería</a></li>
+                        <li><a class="nav__link" href="reserva.html">Reserva</a></li>
+                        <li><a class="nav__link" href="contacto.html" aria-current="page">Contacto</a></li>
+                    </ul>
+                </nav>
 
-                    <li>
-                        <a class="nav__link" href="contacto.html" aria-current="page">
-                            Contacto
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="nav__link" href="login.html">Ingresar</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-     </header>
+                <div class="topbar__actions">
+                    <a class="btn btn--primary" href="reserva.html">Reservar turno</a>
+                </div>
+            </div>
+        </header>
 
         <!-- CONTENIDO PRICIPAL -->
         <main id="main" class="page page--contact">
@@ -121,10 +118,46 @@
                 </section>
             </div>
         </main>
+        <!-- Footer -->
         <footer class="site-footer" role="contentinfo">
+            <div class="container site-footer__grid">
+                <div class="site-footer__brand">
+                    <span class="brand__pole" aria-hidden="true"></span>
+                    <p class="site-footer__wordmark">The&nbsp;Rustic&nbsp;Barberia</p>
+                    <p class="site-footer__tagline">Cortes con carácter. Formación con alma.</p>
+                    <a class="site-footer__about" href="/nosotros">Conoce la historia →</a>
+                </div>
+
+                <nav class="site-footer__nav" aria-label="Navegación secundaria">
+                    <ul>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/servicios">Servicios</a></li>
+                        <li><a href="/equipo">Equipo</a></li>
+                        <li><a href="/galeria">Galería</a></li>
+                        <li><a href="/reserva">Reserva</a></li>
+                        <li><a href="/contacto">Contacto</a></li>
+                        <li><a href="/nosotros">Nosotros</a></li>
+                        <li><a href="/login">Ingresar</a></li>
+                    </ul>
+                </nav>
+
+                <address class="site-footer__contact">
+                    <p>Mz. K5 Lt. 4, A.H. Atusparia, San Juan de Lurigancho 15442</p>
+                    <p><a href="tel:+51 985 798 249">+51 985 798 249</a></p>
+                    <!-- <p><a href="https://instagram.com/therusticbarbershop" rel="noopener noreferrer">@therusticbarbershop</a></p> -->
+                    <p class="site-footer__hours">Lun–Sab 10:00–10:00 · Dom 10:00-8:00</p>
+                </address>
+            </div>
+
             <div class="site-footer__legal container">
-                <small>
-                    &copy; 2026 The Rustic Barberia
-                </small>
+                <small>&copy; 2026 The&nbsp;Rustic&nbsp;Barberia</small>
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="scripts/main.js"></script>
     </body>
 </html>
