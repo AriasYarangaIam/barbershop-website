@@ -2102,24 +2102,141 @@ ul, ol {
     color: var(--accent);
 }
 
-.booking__success {
+/* ==========================================================================
+   Modal de Confirmación — .modal, .modal__overlay, .modal__panel,
+                           .modal__close, .modal__icon, .modal__actions
+   ========================================================================== */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-modal);
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--sp-md);
-    max-width: 560px;
-    padding: var(--sp-xl);
-    background-color: var(--surface);
-    border: 2px solid var(--accent);
-    border-radius: var(--r-card);
+    align-items: center;
+    justify-content: center;
+    padding: var(--sp-md);
 }
 
-.booking__success[hidden] {
+.modal[hidden] {
     display: none;
 }
 
-.booking__success-title {
-    font-size: var(--fs-h1);
+.modal:not(.is-open) {
+    pointer-events: none;
+}
+
+.modal__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(13, 13, 13, 0.72);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    transition: opacity var(--dur-slow) var(--ease-out);
+}
+
+.modal.is-open .modal__overlay {
+    opacity: 1;
+}
+
+.modal__panel {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-md);
+    width: 100%;
+    max-width: 520px;
+    max-height: 100%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: var(--sp-xl);
+    background-color: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--r-media);
+    box-shadow: var(--shadow-3);
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+}
+
+.modal.is-open .modal__panel {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal__close {
+    position: absolute;
+    top: var(--sp-md);
+    right: var(--sp-md);
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--r-control);
+    color: var(--text-primary);
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal__close:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.modal__icon {
+    width: 56px;
+    height: 56px;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--r-pill);
+    background-color: var(--success-surface);
+    color: var(--success);
+    font-size: 26px;
+    line-height: 1;
+}
+
+.modal__title {
+    margin: 0;
+    padding-right: var(--sp-2xl);
+    font-size: var(--fs-h2);
     font-weight: 700;
     letter-spacing: -0.02em;
+}
+
+.modal__lede {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: var(--fs-small);
+}
+
+.modal__actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-sm);
+    margin-top: var(--sp-sm);
+}
+
+.modal__actions .btn {
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .modal {
+        padding: var(--sp-lg);
+    }
+
+    .modal__actions {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .modal__actions .btn {
+        width: auto;
+    }
 }

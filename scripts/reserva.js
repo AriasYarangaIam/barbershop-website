@@ -8,8 +8,22 @@
     var slotsEl = document.getElementById('slots');
     var horaInput = document.getElementById('hora');
     var errorBox = document.getElementById('booking-error');
-    var successBox = document.getElementById('booking-success');
-    var successText = document.getElementById('success-text');
+
+    var modal = document.getElementById('booking-modal');
+    if (!modal) return;
+
+    var modalFields = {
+        servicio: document.getElementById('modal-servicio'),
+        barbero: document.getElementById('modal-barbero'),
+        fecha: document.getElementById('modal-fecha'),
+        hora: document.getElementById('modal-hora'),
+        telefono: document.getElementById('modal-telefono')
+    };
+
+    var submitBtn = form.querySelector('.booking__submit');
+    var closeTriggers = modal.querySelectorAll('[data-modal-close]');
+    var ultimoFoco = null;
+    var CIERRE_MS = 360;
 
     var sum = {
         servicio: document.getElementById('sum-servicio'),
@@ -150,6 +164,65 @@
         errorBox.hidden = false;
     }
 
+    var FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+    function focusablesModal() {
+        var lista = modal.querySelectorAll(FOCUSABLE);
+        return Array.prototype.filter.call(lista, function (el) {
+            return el.offsetParent !== null;
+        });
+    }
+
+    function openModal() {
+        if (!modal.hidden) return;
+        ultimoFoco = document.activeElement;
+        modal.hidden = false;
+        void modal.offsetHeight;
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        var focusables = focusablesModal();
+        if (focusables.length) focusables[0].focus();
+    }
+
+    function closeModal() {
+        if (modal.hidden) return;
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+        form.reset();
+        errorBox.hidden = true;
+        renderSlots();
+        var destino = (ultimoFoco && document.contains(ultimoFoco)) ? ultimoFoco : submitBtn;
+        if (destino) destino.focus();
+        window.setTimeout(function () {
+            modal.hidden = true;
+        }, CIERRE_MS);
+    }
+
+    function trapFocus(e) {
+        if (e.key !== 'Tab') return;
+        var focusables = focusablesModal();
+        if (!focusables.length) return;
+        var primero = focusables[0];
+        var ultimo = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === primero) {
+            e.preventDefault();
+            ultimo.focus();
+        } else if (!e.shiftKey && document.activeElement === ultimo) {
+            e.preventDefault();
+            primero.focus();
+        }
+    }
+
+    for (var i = 0; i < closeTriggers.length; i++) {
+        closeTriggers[i].addEventListener('click', closeModal);
+    }
+
+    modal.addEventListener('keydown', trapFocus);
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !modal.hidden) closeModal();
+    });
+
     fecha.addEventListener('change', renderSlots);
     form.addEventListener('change', function (e) {
         if (e.target.name === 'servicio') renderSlots();
@@ -168,13 +241,14 @@
         // TODO: enviar los datos al backend (fetch/POST) antes de mostrar la confirmación.
         var s = servicioActual().dataset.label;
         var b = barberoActual().dataset.label;
-        successText.textContent = s + ' con ' + b + ' el ' + sum.fecha.textContent + ' a las ' + horaInput.value +
-            '. Te contactaremos al ' + form.elements.telefono.value.trim() + ' para confirmar.';
 
-        form.hidden = true;
-        document.querySelector('.booking__grid').hidden = true;
-        successBox.hidden = false;
-        successBox.focus();
+        if (modalFields.servicio) modalFields.servicio.textContent = s;
+        if (modalFields.barbero) modalFields.barbero.textContent = b;
+        if (modalFields.fecha) modalFields.fecha.textContent = sum.fecha.textContent;
+        if (modalFields.hora) modalFields.hora.textContent = horaInput.value;
+        if (modalFields.telefono) modalFields.telefono.textContent = form.elements.telefono.value.trim();
+
+        openModal();
     });
 
     updateSummary();
