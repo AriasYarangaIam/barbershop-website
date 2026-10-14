@@ -206,12 +206,6 @@
                 </aside>
 
             </div>
-
-            <div class="booking__success" id="booking-success" role="status" tabindex="-1" hidden>
-                <h2 class="booking__success-title">¡Reserva recibida!</h2>
-                <p id="success-text"></p>
-                <a class="btn btn--ghost" href="/">Volver al inicio</a>
-            </div>
         </section>
     </main>
 
@@ -252,6 +246,29 @@
             </ul>
         </div>
     </footer>
+
+    <div class="modal" id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title" aria-describedby="booking-modal-lede" hidden>
+        <div class="modal__overlay" data-modal-close aria-hidden="true"></div>
+        <div class="modal__panel">
+            <button class="modal__close" type="button" aria-label="Cerrar confirmación" data-modal-close>
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <p class="modal__icon" aria-hidden="true">&#10003;</p>
+            <h2 class="modal__title" id="booking-modal-title">¡Reserva recibida!</h2>
+            <p class="modal__lede" id="booking-modal-lede">Guarda estos datos. Te contactaremos para confirmar tu turno.</p>
+            <dl class="summary">
+                <div><dt>Servicio</dt><dd id="modal-servicio">—</dd></div>
+                <div><dt>Barbero</dt><dd id="modal-barbero">—</dd></div>
+                <div><dt>Fecha</dt><dd id="modal-fecha">—</dd></div>
+                <div><dt>Hora</dt><dd id="modal-hora">—</dd></div>
+                <div><dt>Teléfono</dt><dd id="modal-telefono">—</dd></div>
+            </dl>
+            <div class="modal__actions">
+                <a class="btn btn--accent" href="/">Volver al inicio</a>
+                <button class="btn btn--ghost" type="button" data-modal-close>Cerrar</button>
+            </div>
+        </div>
+    </div>
 
     <script src="scripts/main.js"></script>
     <script src="scripts/reserva.js"></script>
