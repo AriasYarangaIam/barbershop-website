@@ -146,15 +146,15 @@ Descripciones literales (A2): Corte Caballero = `Asesoramiento personalizado, la
 
 | ID | Spec | Ruta | Contenido | Commit |
 |---|---|---|---|---|
-| T1 | S1,S2,S3,S4,S5,S13,S15,S16,S17 | A1 | `index.html`: head, JSON-LD, shell, hero, 3 cards, preview de equipo, testimonio, footer, CTA | `feat(index): migra la home a Montalvo For Men` |
-| T2 | S1,S2,S3,S4,S6,S15,S16,S17 | A2 | `pages/servicios.html`: catálogo de 6 servicios + proceso + CTA | `feat(servicios): migra el catálogo oficial en soles` |
-| T3 | S1,S2,S3,S7,S15,S16,S17 | A3 | `pages/equipo.html`: barberos, portfolio preview, testimonios | `feat(equipo): actualiza barberos y prueba social` |
+| T1 | S1,S2,S3,S4,S5,S13,S15,S16,S17 | A1 | `index.html`: head, JSON-LD, shell, hero, 3 cards, preview de equipo, testimonio, footer, CTA | `11880c0` |
+| T2 | S1,S2,S3,S4,S6,S15,S16,S17 | A2 | `pages/servicios.html`: catálogo de 6 servicios + proceso + CTA | `4aa9661` |
+| T3 | S1,S2,S3,S7,S15,S16,S17 | A3 | `pages/equipo.html`: barberos, portfolio preview (CSS `.masonry`), testimonios | `7cf6e7f` |
 | T4 | S1,S2,S3,S4,S8,S16,S17 | A4 | `pages/reserva.html` + `scripts/reserva.js`: 6 servicios, horario unificado, copy; modal verificado | `feat(reserva): alinea servicios y horarios oficiales` |
 | T5 | S1,S2,S3,S9,S17 | A5 | `pages/contacto.html`: datos, horarios, mapa, asuntos, form | `feat(contacto): reemplaza datos de contacto y sedes` |
 | T6 | S13 | B3 | `scripts/contacto.js`: validación accesible | `feat(contacto): valida el formulario en cliente` |
 | T7 | S1,S2,S3,S10,S14,S17 | A6 | `pages/login.html` + CSS `.login*` | `feat(login): homologa shell y metadatos` |
 | T8 | S1,S2,S3,S11,S14,S15,S16 | B1 | `pages/nosotros.html` + CSS de Nosotros | `feat(nosotros): maqueta la historia editorial` |
-| T9 | S1,S2,S3,S12,S14,S15,S16 | B2 | `pages/galeria.html` + CSS de Galería | `feat(galeria): maqueta masonry y comparador` |
+| T9 | S1,S2,S3,S12,S14,S15,S16 | B2 | `pages/galeria.html` + CSS `.before-after`/`.ba-slider`/`.filters`/`.chip` (masonry ya en T3) | `feat(galeria): maqueta masonry y comparador` |
 | T10 | S13 | B4 | `scripts/galeria.js`: slider + filtros | `feat(galeria): habilita comparador y filtros` |
 | T11 | S1,S11 | C1 | `docs/BUSINESS.md` (Brand Book; `docs/` está en `.gitignore`, no se commitea) | — |
 | T12 | S15,S17 + DoD §8 | C2 | Auditoría final: greps de erradicación, navs, precios, CTA, imágenes; reconciliar ODD previo | `chore(odd): audita la migración de marca` |
@@ -166,3 +166,6 @@ Descripciones literales (A2): Corte Caballero = `Asesoramiento personalizado, la
 - **L3 (conflicto de navegación):** el commit `d95fcab` eliminó `Nosotros` e `Ingresar` del footer; MIGRATION.md §6-A1 y el DoD exigen 8 enlaces. Criterio: manda MIGRATION.md v2 (8 enlaces) en las 8 páginas.
 - **L4 (evidencia):** `scripts/reserva.js` usa radios `name="servicio"` (no el `select #service` que describe A4) y `HORARIOS` con domingo cerrado; se conserva la estructura y se ajustan valores/horas al S1 y S4.
 - **L5 (rama):** `feature/montalvo-migration` creada desde `fix/footer-nav-standardization`, que contiene el trabajo previo no mergeado (contacto, servicios, modal de reserva) y es la única base con esos archivos implementados.
+- **L6 (orden CSS):** el portfolio de A3 es el primer consumidor de `.masonry`, así que su bloque CSS se anexa en T3; T9 queda acotado a `.before-after`, `.ba-slider`, `.filters` y `.chip` más la página.
+- **L7 (avance):** T1-T3 completadas y verificadas (`11880c0`, `4aa9661`, `7cf6e7f`). Próximo corte: T4 (reserva + `reserva.js`).
+- **L8 (pendiente de decisión):** T11 escribe `docs/BUSINESS.md`, pero `docs/` está en `.gitignore`; el Brand Book quedará fuera de git salvo que el usuario pida forzarlo.
