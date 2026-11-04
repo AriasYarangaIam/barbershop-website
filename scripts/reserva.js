@@ -33,7 +33,16 @@
         total: document.getElementById('sum-total')
     };
 
-    var HORARIOS = { 1: [9, 20], 2: [9, 20], 3: [9, 20], 4: [9, 20], 5: [9, 20], 6: [10, 18] };
+    // Franjas en minutos desde medianoche: Lun–Vie 08:30–21:30 · Sáb 09:00–21:30 · Dom 10:00–20:00
+    var HORARIOS = {
+        0: [600, 1200],
+        1: [510, 1290],
+        2: [510, 1290],
+        3: [510, 1290],
+        4: [510, 1290],
+        5: [510, 1290],
+        6: [540, 1290]
+    };
     var PASO_MIN = 30;
 
     function pad(n) { return n < 10 ? '0' + n : String(n); }
@@ -76,14 +85,10 @@
 
         var d = parseFecha(fecha.value);
         var rango = HORARIOS[d.getDay()];
-        if (!rango) {
-            slotsEl.innerHTML = '<li class="slots__empty">Los domingos permanecemos cerrados. Elige otra fecha.</li>';
-            return;
-        }
 
         var duracion = Number(servicioActual().dataset.duration);
-        var inicio = rango[0] * 60;
-        var fin = rango[1] * 60;
+        var inicio = rango[0];
+        var fin = rango[1];
         var ahora = new Date();
         var esHoy = fecha.value === hoyISO();
         var minAhora = ahora.getHours() * 60 + ahora.getMinutes();
@@ -234,7 +239,6 @@
         errorBox.hidden = true;
 
         if (!fecha.value) { mostrarError('Elige una fecha.'); fecha.focus(); return; }
-        if (!HORARIOS[parseFecha(fecha.value).getDay()]) { mostrarError('Los domingos permanecemos cerrados. Elige otra fecha.'); fecha.focus(); return; }
         if (!horaInput.value) { mostrarError('Elige un horario disponible.'); return; }
         if (!validar()) { mostrarError('Revisa los campos marcados.'); return; }
 
