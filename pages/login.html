@@ -6,62 +6,93 @@
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-    <title>Ingresar — Barbería Urbana</title>
-    <meta name="description" content="Accedé a tu cuenta de Barbería Urbana para gestionar tus turnos y preferencias.">
-    <link rel="canonical" href="https://barberiaurbana.com/login.html">
-    <meta property="og:title" content="Ingresar — Barbería Urbana">
-    <meta property="og:description" content="Accedé a tu cuenta de Barbería Urbana para gestionar tus turnos y preferencias.">
-    <meta property="og:image" content="https://barberiaurbana.com/og/hero.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <title>Ingresar — Montalvo For Men</title>
+    <meta name="description" content="Accede a tu cuenta de Montalvo For Men para gestionar tus citas y preferencias.">
+    <link rel="canonical" href="https://montalvoformen.com.pe/login">
+    <meta property="og:title" content="Ingresar — Montalvo For Men">
+    <meta property="og:description" content="Accede a tu cuenta de Montalvo For Men para gestionar tus citas.">
+    <meta property="og:image" content="https://montalvoformen.com.pe/images/hero.jpg">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#8B6B12">
+    <meta name="theme-color" content="#0D0D0D">
 </head>
 <body>
     <a href="#main" class="skip-link">Ir a contenido principal</a>
     <header class="topbar" role="banner">
         <div class="topbar__inner container">
-            <a class="brand" href="index.html" aria-label="Barbería Urbana - Inicio">
+            <a class="brand" href="/" aria-label="Montalvo For Men — inicio">
                 <span class="brand__pole" aria-hidden="true"></span>
-                <span class="brand__wordmark">Barbería&nbsp;Urbana</span>
+                <span class="brand__wordmark">Montalvo&nbsp;For&nbsp;Men</span>
             </a>
             <nav class="nav" aria-label="Navegación principal">
                 <ul class="nav__list">
                     <li><a class="nav__link" href="/">Inicio</a></li>
+                    <li><a class="nav__link" href="/servicios">Servicios</a></li>
+                    <li><a class="nav__link" href="/equipo">Equipo</a></li>
+                    <li><a class="nav__link" href="/galeria">Galería</a></li>
+                    <li><a class="nav__link" href="/reserva">Reserva</a></li>
                     <li><a class="nav__link" href="/contacto">Contacto</a></li>
-                    <li><a class="nav__link" href="/login" aria-current="page">Ingresar</a></li>
                 </ul>
             </nav>
+            <a class="btn btn--primary topbar__cta" href="/reserva">Reservar turno</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Abrir menú">
+                <span aria-hidden="true"></span>
+            </button>
         </div>
     </header>
+
+    <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menú de navegación" hidden>
+        <div class="mobile-drawer__overlay" data-drawer-close aria-hidden="true"></div>
+        <div class="mobile-drawer__panel">
+            <div class="mobile-drawer__head">
+                <span class="brand__pole" aria-hidden="true"></span>
+                <span class="mobile-drawer__title">Montalvo For Men</span>
+                <button class="mobile-drawer__close" type="button" aria-label="Cerrar menú" data-drawer-close>
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <nav aria-label="Navegación móvil">
+                <ul class="mobile-drawer__list">
+                    <li><a class="mobile-drawer__link" href="/">Inicio</a></li>
+                    <li><a class="mobile-drawer__link" href="/servicios">Servicios</a></li>
+                    <li><a class="mobile-drawer__link" href="/equipo">Equipo</a></li>
+                    <li><a class="mobile-drawer__link" href="/galeria">Galería</a></li>
+                    <li><a class="mobile-drawer__link" href="/reserva">Reserva</a></li>
+                    <li><a class="mobile-drawer__link" href="/contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn--accent mobile-drawer__cta" href="/reserva">Reservar turno</a>
+        </div>
+    </div>
+
     <main id="main" class="page page--login">
         <section class="login container" aria-labelledby="login-title">
             <div class="login__card">
+                <p class="eyebrow"><span class="eyebrow__pole" aria-hidden="true"></span>Mi cuenta</p>
                 <h1 id="login-title">Ingresar</h1>
-                <p class="login__lede">Accede para gestionar tus turnos</p>
+                <p class="login__lede">Accede a tu cuenta de Montalvo For Men para gestionar tus citas.</p>
                 <form action="#" method="post">
                     <div class="field">
                         <label for="username">Usuario</label>
-                        <input id="username" name="username" type="text"
-                        autocomplete="username" required>
+                        <input id="username" name="username" type="text" autocomplete="username" placeholder="Ej. juan.perez…" required>
                     </div>
                     <div class="field">
                         <label for="password">Contraseña</label>
-                        <input id="password" name="password" type="password"
-                        autocomplete="current-password" required minlength="8">
+                        <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Tu contraseña…" required minlength="8">
                     </div>
-                    <button class="btn btn--primary login__submit"
-                    type="submit">Iniciar sesión</button>
+                    <button class="btn btn--primary login__submit" type="submit">Iniciar sesión</button>
                 </form>
                 <p class="login__note">¿No tienes cuenta? <a href="/contacto">Escríbenos</a>.</p>
             </div>
         </section>
     </main>
+
     <footer class="site-footer" role="contentinfo">
         <div class="container site-footer__grid">
             <div class="site-footer__brand">
                 <span class="brand__pole" aria-hidden="true"></span>
-                <p class="site-footer__wordmark">The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</p>
-                <p class="site-footer__tagline">Cortes con carácter. Formación con alma.</p>
+                <p class="site-footer__wordmark">Montalvo&nbsp;For&nbsp;Men</p>
+                <p class="site-footer__tagline">Amenas charlas. Buenos servicios. Excelentes cortes.</p>
                 <a class="site-footer__about" href="/nosotros">Conoce la historia →</a>
             </div>
 
@@ -79,19 +110,21 @@
             </nav>
 
             <address class="site-footer__contact">
-                <p>Mz K5 LT4 A.A.H.H., Atusparia, San Juan de Lurigancho 15442</p>
-                <p><a href="tel:+51985798249">+51 985 798 249</a></p>
-                <p class="site-footer__hours">Lun–Vie 09:00–20:00 · Sáb 10:00–18:00 · Dom cerrado</p>
+                <p>Av. Javier Prado Oeste 583, Magdalena del Mar, Lima</p>
+                <p><a href="tel:+5114614464">+51 1 461 4464</a></p>
+                <p class="site-footer__hours">Lun–Vie 08:30–21:30 · Sáb 09:00–21:30 · Dom 10:00–20:00</p>
             </address>
         </div>
 
         <div class="site-footer__legal container">
-            <small>&copy; 2025 The&nbsp;Rustic&nbsp;Barber&nbsp;Shop</small>
+            <small>&copy; 2026 Montalvo For Men · Grupo Montalvo</small>
             <ul>
                 <li><a href="#">Política de privacidad</a></li>
                 <li><a href="#">Términos</a></li>
             </ul>
         </div>
     </footer>
+
+    <script src="/scripts/main.js"></script>
 </body>
 </html>

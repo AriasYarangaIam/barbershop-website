@@ -2339,3 +2339,60 @@ ul, ol {
         width: auto;
     }
 }
+/* ==========================================================================
+   Login Page — .login, .login__card, .login__submit, .login__note
+   ========================================================================== */
+.login {
+    display: flex;
+    justify-content: center;
+    padding-block: var(--sp-3xl);
+}
+
+.login__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-md);
+    width: 100%;
+    max-width: 400px;
+    padding: var(--sp-xl);
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-card);
+    box-shadow: var(--shadow-1);
+}
+
+.login__card h1 {
+    font-size: var(--fs-h1);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.login__card form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-md);
+}
+
+.login__lede {
+    color: var(--text-secondary);
+    font-size: var(--fs-small);
+}
+
+.login__submit {
+    width: 100%;
+}
+
+.login__note {
+    color: var(--text-secondary);
+    font-size: var(--fs-small);
+}
+
+.login__note a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.login__note a:hover {
+    text-decoration: underline;
+}
