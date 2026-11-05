@@ -41,3 +41,10 @@ Implementar completamente `pages/servicios.html` + su CSS en `styles/styles.css`
 - RDD: OFF (decisión global) → sin ceremonia de review; delivery sigue política ordinaria del repo.
 - Pendiente de producto: precios/duración propuestos para Coloración (S/35 · 60min), Limpieza Facial (S/20 · 30min) y Corte Junior (S/10 · 30min) — no están en los docs, VALIDAR con el usuario.
 - Pendiente de decisión: push/PR de `add/servicios-page` (decisión del usuario; `ask-on-risk`: 325 líneas < 400 → PR único).
+
+
+## Reconciliación (feature montalvo-migration, 2026)
+
+Estado: **ejecutada y superada**. El trabajo de esta tarea se completó en su momento; la feature
+`montalvo-migration` reemplazó después el contenido de marca sobre la misma estructura (sin reabrir
+las decisiones técnicas aquí tomadas). Ver `odd/tasks/montalvo-migration.md`.
