@@ -1394,6 +1394,41 @@ ul, ol {
     width: 100%;
 }
 
+/* --- Estado de envío --- */
+.contact-form-card__status {
+    margin-top: var(--sp-sm);
+    color: var(--text-secondary);
+    font-size: var(--fs-small);
+}
+
+.btn__spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: var(--sp-sm);
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    vertical-align: middle;
+    animation: btn-spin 700ms linear infinite;
+}
+
+.btn__spinner[hidden] {
+    display: none;
+}
+
+@keyframes btn-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn__spinner {
+        animation: none;
+    }
+}
+
 /* ==========================================================================
    Reserva (Booking) — .booking__grid, .booking__form, .booking__slots,
                        .booking__pole, .booking__info, .slots
