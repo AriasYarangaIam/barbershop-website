@@ -153,11 +153,11 @@ Descripciones literales (A2): Corte Caballero = `Asesoramiento personalizado, la
 | T5 | S1,S2,S3,S9,S17 | A5 | `pages/contacto.html`: datos, horarios, mapa, asuntos, form | `feat(contacto): reemplaza datos de contacto y sedes` |
 | T6 | S13 | B3 | `scripts/contacto.js`: validación accesible | `feat(contacto): valida el formulario en cliente` |
 | T7 | S1,S2,S3,S10,S14,S17 | A6 | `pages/login.html` + CSS `.login*` | `feat(login): homologa shell y metadatos` |
-| T8 | S1,S2,S3,S11,S14,S15,S16 | B1 | `pages/nosotros.html` + CSS de Nosotros | `feat(nosotros): maqueta la historia editorial` |
-| T9 | S1,S2,S3,S12,S14,S15,S16 | B2 | `pages/galeria.html` + CSS `.before-after`/`.ba-slider`/`.filters`/`.chip` (masonry ya en T3) | `feat(galeria): maqueta masonry y comparador` |
-| T10 | S13 | B4 | `scripts/galeria.js`: slider + filtros | `feat(galeria): habilita comparador y filtros` |
+| T8 | S1,S2,S3,S11,S14,S15,S16 | B1 | `pages/nosotros.html` + CSS de Nosotros | `a038d0e` |
+| T9 | S1,S2,S3,S12,S14,S15,S16 | B2 | `pages/galeria.html` + CSS `.before-after`/`.ba-slider`/`.filters`/`.chip` (masonry ya en T3) | `8f8fa7c` |
+| T10 | S13 | B4 | `scripts/galeria.js`: slider + filtros | `d7bb63b` |
 | T11 | S1,S11 | C1 | `docs/BUSINESS.md` (Brand Book; `docs/` está en `.gitignore`, no se commitea) | local, sin commit |
-| T12 | S15,S17 + DoD §8 | C2 | Auditoría final: greps de erradicación, navs, precios, CTA, imágenes; reconciliar ODD previo | `chore(odd): audita la migración de marca` |
+| T12 | S15,S17 + DoD §8 | C2 | Auditoría final: greps de erradicación, navs, precios, CTA, imágenes; reconciliar ODD previo | `123a0ff` |
 
 ## Log
 
@@ -171,3 +171,7 @@ Descripciones literales (A2): Corte Caballero = `Asesoramiento personalizado, la
 - **L8 (pendiente de decisión):** T11 escribe `docs/BUSINESS.md`, pero `docs/` está en `.gitignore`; el Brand Book quedará fuera de git salvo que el usuario pida forzarlo.
 - **L9 (avance):** T4 completada y verificada (`207551c`): 6 servicios con `data-price`/`data-duration`, franjas en minutos con domingo abierto, mensajes de domingo cerrado retirados, modal intacto. T11 completada: `docs/BUSINESS.md` reescrito como Brand Book de Montalvo For Men (historia, valores, catálogo, sedes, métricas, límites); sigue fuera de git por `.gitignore`.
 - **L10 (siguiente):** T5 (contacto) + T6 (`scripts/contacto.js`) son la siguiente unidad; luego T7 (login), T8 (nosotros), T9-T10 (galería) y T12 (auditoría).
+- **L11 (delegación fallida):** el escritor `gentle-ai-worker` falló con «assistant reported an error» y **no escribió ningún archivo** (contacto.html seguía legacy y `scripts/contacto.js` en 0 bytes). T5 y T6 se hicieron inline con la misma especificación; no se reintentó la delegación.
+- **L12 (auditoría final, T12):** erradicación limpia en 8 HTML + `styles/` + `scripts/` + `vercel.json`; 6 enlaces de topbar y 8 de footer en las 8 páginas; un solo `<h1>` y skip link en todas; CTA «¿Listo para el corte?» solo en index, servicios, equipo, galería y nosotros; precios únicamente en formato `S/ XX.00`; todas las `<img>` locales resuelven; `vercel.json` y `scripts/main.js` sin cambios; `node --check` OK en los 4 scripts; llaves CSS balanceadas (419/419); los 268 selectores previos siguen presentes (322 actuales, 0 faltantes).
+- **L13 (defectos encontrados y corregidos en T12):** `pages/reserva.html` cargaba `scripts/main.js` y `scripts/reserva.js` con rutas relativas (404 al abrir el archivo, dependía del rewrite) y `pages/nosotros.html` tenía un drawer de 7 enlaces con `aria-current` cuando el resto usa 6. Corregido en `123a0ff`.
+- **L14 (cierre):** las 12 tareas están completas. `docs/BUSINESS.md` queda fuera de git por `.gitignore`; el resto está en la rama `feature/montalvo-migration` (13 commits sobre `99395a4`), sin push ni PR, que siguen siendo decisión del usuario.
