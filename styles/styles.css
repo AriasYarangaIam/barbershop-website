@@ -1127,6 +1127,10 @@ ul, ol {
     font-size: var(--fs-small);
 }
 
+.site-footer__hours span {
+    white-space: nowrap;
+}
+
 /* --- Filtros Sticky --- */
 .filters {
     position: sticky;
