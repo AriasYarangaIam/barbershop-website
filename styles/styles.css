@@ -1127,6 +1127,33 @@ ul, ol {
     font-size: var(--fs-small);
 }
 
+.ba-slider__label {
+    position: absolute;
+    top: var(--sp-md);
+    z-index: 1;
+    padding: var(--sp-xs) var(--sp-sm);
+    border-radius: var(--r-pill);
+    background-color: rgba(13, 13, 13, 0.72);
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: var(--fs-label);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    pointer-events: none;
+}
+
+.ba-slider__label--before {
+    left: var(--sp-md);
+}
+
+.ba-slider__label--after {
+    right: var(--sp-md);
+}
+
+.masonry {
+    padding-block: var(--sp-lg);
+}
+
 .site-footer__hours span {
     white-space: nowrap;
 }
