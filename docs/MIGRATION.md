@@ -70,7 +70,7 @@
 | **Instagram Oficial** | @montalvoformen | `https://www.instagram.com/montalvoformen` |
 | **Horario Unificado de Atención** | Lun–Vie 08:30–21:30 · Sáb 09:00–21:30 · Dom 10:00–20:00 | Para footer y tabla de horarios |
 | **Copyright Legal** | &copy; 2026 Montalvo For Men · Grupo Montalvo | `<small>&copy; 2026 Montalvo For Men · Grupo Montalvo</small>` |
-| **Dominio Canónico SEO** | https://montalvoformen.com.pe | Base para etiquetas canonical y Open Graph |
+| **Dominio Canónico SEO** | https://montalvobarber.com.pe | Base para etiquetas canonical y Open Graph |
 | **Métrica de sedes Institute (única)** | 16 sedes | Se usa **el mismo valor** en narrativa y stats de `/nosotros` (corrige la versión 1, que mezclaba "más de 15" con "16") |
 
 ---
@@ -114,7 +114,7 @@ Tarifas referenciales de mercado calibradas según declaraciones de la gerencia 
 * **`<head>`:**
   * Title: `Montalvo For Men — Cortes con carácter | Reserva tu cita en Lima`
   * Meta description: `Montalvo For Men: la cadena líder de barberías en Perú con 45 sedes a nivel nacional. Cortes de caballero, fades, ritual de barba con toallas calientes y cuidado facial. Reserva online.`
-  * Canonical: `https://montalvoformen.com.pe/` (reemplaza `therusticbarbershop.com` también en OG).
+  * Canonical: `https://montalvobarber.com.pe/` (reemplaza `therusticbarbershop.com` también en OG).
   * JSON-LD: Entidad `HairSalon`, nombre `Montalvo For Men`, dirección `Av. Javier Prado Oeste 583, Magdalena del Mar, Lima`, teléfono `+5114614464`, **priceRange `S/ 30.00 - S/ 65.00`** (rango real del catálogo; corrige `S/ 30 - S/ 70` de la versión 1).
 * **Hero (`.hero`):**
   * Eyebrow: `Grupo Montalvo · 45 sedes en Perú`
@@ -195,7 +195,7 @@ Tarifas referenciales de mercado calibradas según declaraciones de la gerencia 
 
 #### A6. `pages/login.html`
 * Estado: legacy "Barbería Urbana" (canonical `barberiaurbana.com`, OG muerto, carga `Big Shoulders Display`).
-* **`<head>`:** Reemplazo completo — Montserrat + JetBrains Mono (mismo bloque `<link>` estándar de `DEVELOPMENT.md` §4), title `Ingresar — Montalvo For Men`, canonical `https://montalvoformen.com.pe/login`, OG homologado.
+* **`<head>`:** Reemplazo completo — Montserrat + JetBrains Mono (mismo bloque `<link>` estándar de `DEVELOPMENT.md` §4), title `Ingresar — Montalvo For Men`, canonical `https://montalvobarber.com.pe/login`, OG homologado.
 * **Page Header / Tarjeta:**
   * H1: `Ingresar`
   * Lede: `Accede a tu cuenta de Montalvo For Men para gestionar tus citas.` *(no se promete campus virtual de Montalvo Institute — §1.5)*

@@ -21,17 +21,17 @@ Spec autorizada: `docs/MIGRATION.md` v2. Ejecución gradual: una tarea = un comm
 | Instagram | `@montalvoformen` → `https://www.instagram.com/montalvoformen` |
 | Horario unificado | `Lun–Vie 08:30–21:30 · Sáb 09:00–21:30 · Dom 10:00–20:00` |
 | Copyright | `<small>&copy; 2026 Montalvo For Men · Grupo Montalvo</small>` |
-| Dominio canónico | `https://montalvoformen.com.pe` |
+| Dominio canónico | `https://montalvobarber.com.pe` |
 | Métrica Institute | `16 sedes` (mismo valor en narrativa y stats) |
 
 ### S2 — Metadatos por página
 
-- index: title `Montalvo For Men — Cortes con carácter | Reserva tu cita en Lima`; description `Montalvo For Men: la cadena líder de barberías en Perú con 45 sedes a nivel nacional. Cortes de caballero, fades, ritual de barba con toallas calientes y cuidado facial. Reserva online.`; canonical `https://montalvoformen.com.pe/`.
+- index: title `Montalvo For Men — Cortes con carácter | Reserva tu cita en Lima`; description `Montalvo For Men: la cadena líder de barberías en Perú con 45 sedes a nivel nacional. Cortes de caballero, fades, ritual de barba con toallas calientes y cuidado facial. Reserva online.`; canonical `https://montalvobarber.com.pe/`.
 - servicios: canonical `/servicios`, OG homologado.
 - equipo: canonical `/equipo`, OG homologado.
 - reserva: canonical `/reserva`, OG homologado.
 - contacto: title `Contacto y sedes — Montalvo For Men | Lima, Perú`; canonical `/contacto`.
-- login: title `Ingresar — Montalvo For Men`; canonical `https://montalvoformen.com.pe/login`.
+- login: title `Ingresar — Montalvo For Men`; canonical `https://montalvobarber.com.pe/login`.
 - nosotros / galeria: canonical + OG en el dominio oficial.
 - JSON-LD index: `HairSalon`, name `Montalvo For Men`, address `Av. Javier Prado Oeste 583, Magdalena del Mar, Lima`, telephone `+5114614464`, priceRange `S/ 30.00 - S/ 65.00`.
 - theme-color se conserva `#0D0D0D`.
@@ -158,6 +158,7 @@ Descripciones literales (A2): Corte Caballero = `Asesoramiento personalizado, la
 | T10 | S13 | B4 | `scripts/galeria.js`: slider + filtros | `d7bb63b` |
 | T11 | S1,S11 | C1 | `docs/BUSINESS.md` (Brand Book; `docs/` está en `.gitignore`, no se commitea) | local, sin commit |
 | T12 | S15,S17 + DoD §8 | C2 | Auditoría final: greps de erradicación, navs, precios, CTA, imágenes; reconciliar ODD previo | `123a0ff` |
+| T13 | S1,S2,S17 | C3 | Dominio canónico del clon cambiado a `montalvobarber.com.pe` en los 8 HTML (canonical, og:image, JSON-LD) y en la spec; README y Brand Book reconciliados | *(este commit)* |
 
 ## Log
 
@@ -175,3 +176,8 @@ Descripciones literales (A2): Corte Caballero = `Asesoramiento personalizado, la
 - **L12 (auditoría final, T12):** erradicación limpia en 8 HTML + `styles/` + `scripts/` + `vercel.json`; 6 enlaces de topbar y 8 de footer en las 8 páginas; un solo `<h1>` y skip link en todas; CTA «¿Listo para el corte?» solo en index, servicios, equipo, galería y nosotros; precios únicamente en formato `S/ XX.00`; todas las `<img>` locales resuelven; `vercel.json` y `scripts/main.js` sin cambios; `node --check` OK en los 4 scripts; llaves CSS balanceadas (419/419); los 268 selectores previos siguen presentes (322 actuales, 0 faltantes).
 - **L13 (defectos encontrados y corregidos en T12):** `pages/reserva.html` cargaba `scripts/main.js` y `scripts/reserva.js` con rutas relativas (404 al abrir el archivo, dependía del rewrite) y `pages/nosotros.html` tenía un drawer de 7 enlaces con `aria-current` cuando el resto usa 6. Corregido en `123a0ff`.
 - **L14 (cierre):** las 12 tareas están completas. `docs/BUSINESS.md` queda fuera de git por `.gitignore`; el resto está en la rama `feature/montalvo-migration` (13 commits sobre `99395a4`), sin push ni PR, que siguen siendo decisión del usuario.
+- **L15 (cambio de dominio, T13):** «El proyecto actualmente que tenemos es un clon, no un reemplazo de montalvoformen, así que, que el dominio tenga el nombre solamente "montalvobarber.com.pe", para evitar estos problemas. Si siguen apareciendo inconsistencias, deja el nombre del dominio tal y como estaba antes.»
+  - Se reemplazaron 18 ocurrencias en 8 HTML: 8 `canonical`, 8 `og:image` y 2 `image` de JSON-LD (index y contacto).
+  - `montalvobarber.com.pe` **no está registrado** (NXDOMAIN): los metadatos apuntan a una URL inexistente hasta que se registre y se despliegue. Se prefirió ese valor neutro antes que declarar como canónica la web del negocio real.
+  - Inconsistencia resuelta: `docs/BUSINESS.md` §08 documenta la marca real y conserva `montalvoformen.com.pe`, con nota que distingue el dominio del clon. `docs/MIGRATION.md` sí se actualizó porque describe los metadatos de este proyecto.
+  - **L14 quedó desactualizada:** `docs/` ya está versionado (`f4ec4d5`).

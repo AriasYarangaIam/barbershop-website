@@ -4,7 +4,7 @@ Sitio web de **Montalvo For Men**, la red de barbería masculina del Grupo Monta
 
 Es un sitio **estático**: HTML, CSS y JavaScript sin frameworks, sin paso de build y **sin backend**. Toda la interactividad (drawer móvil, selector de horarios, comparador de imágenes, validación de formularios) ocurre en el navegador.
 
-- **Dominio canónico** (declarado en los metadatos): `https://montalvoformen.com.pe`
+- **Dominio canónico** (declarado en los metadatos): `https://montalvobarber.com.pe` — dominio propio de este clon, distinto del sitio del negocio real
 - **Despliegue:** Vercel, con rutas limpias mediante `vercel.json` (ver *Despliegue*: el dominio oficial aún no sirve este proyecto)
 - **Idioma del contenido público:** español (Perú)
 
@@ -104,7 +104,7 @@ El sitio se despliega en **Vercel** como proyecto estático:
 2. No configurar comando de build ni directorio de salida: se publica la raíz del repositorio tal cual.
 3. `vercel.json` aporta únicamente los rewrites de rutas limpias.
 
-> **Estado del dominio:** los metadatos (`canonical`, Open Graph) apuntan a `https://montalvoformen.com.pe`, pero **ese dominio no sirve este proyecto**. Hoy responde con un sitio WordPress sobre PHP 8.5 alojado en Hostinger (`platform: hostinger`, `x-powered-by: PHP/8.5.12`). El despliegue de Vercel existe solo como destino previsto: mientras el DNS no apunte a Vercel, la URL pública seguirá mostrando el sitio anterior.
+> **Estado del dominio:** este proyecto es un **clon**, no un reemplazo del sitio del negocio real, y por eso declara un dominio propio: `https://montalvobarber.com.pe`. Ese dominio **todavía no está registrado ni resuelve** (el DNS devuelve `NXDOMAIN`), así que los `canonical` y `og:image` apuntan hoy a una URL inexistente. Es deliberado: el valor neutro evita señalar como canónica la web de la marca real, `https://montalvoformen.com.pe`, que sirve un WordPress sobre PHP 8.5 en Hostinger y **no es este proyecto**. Al publicar hay que registrar el dominio y apuntarlo a Vercel.
 
 ---
 

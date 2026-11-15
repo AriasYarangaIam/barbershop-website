@@ -108,7 +108,7 @@ Tarifas referenciales en soles (S/). Precios claros, sin sorpresas.
 - **WhatsApp de reservas:** +51 945 036 190 · +51 932 824 708 (display `945 036 190`).
 - **Email de atención corporativa:** telemarketing@montalvogroup.com.pe.
 - **Instagram:** [@montalvoformen](https://www.instagram.com/montalvoformen).
-- **Dominio canónico:** `https://montalvoformen.com.pe`.
+- **Dominio canónico:** `https://montalvoformen.com.pe` — dominio del negocio real. Este proyecto es un **clon** y declara `https://montalvobarber.com.pe` en sus metadatos para no reutilizarlo.
 - **Horario unificado:** Lun–Vie 08:30–21:30 · Sáb 09:00–21:30 · Dom 10:00–20:00.
 
 ---
